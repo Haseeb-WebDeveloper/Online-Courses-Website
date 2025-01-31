@@ -47,7 +47,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {/* <SplashCursor /> */}
+          <SplashCursor />
           {children}
         </ThemeProvider>
       </body>

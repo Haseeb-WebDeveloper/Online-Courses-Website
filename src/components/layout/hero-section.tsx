@@ -132,9 +132,6 @@ export function HeroSection() {
                     <span className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
                       {stat.value}
                     </span>
-                    <span className="absolute -top-1 -right-4 text-sm text-primary">
-                      {stat.suffix}
-                    </span>
                   </div>
                   <p className="text-sm text-muted-foreground tracking-wide uppercase">
                     {stat.label}

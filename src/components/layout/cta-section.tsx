@@ -39,7 +39,7 @@ export function CTASection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <GSAPButton variant="mainPrimary" size="lg" className="min-w-[200px]">
+            <GSAPButton variant="mainPrimary" className="min-w-[200px]">
               Get Started <ArrowRight className="w-4 h-4" />
             </GSAPButton>
           </motion.div>

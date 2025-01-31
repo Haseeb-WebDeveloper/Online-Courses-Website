@@ -57,7 +57,7 @@ export function AboutSection() {
       })
 
       // Improved text reveal animations
-      const textElements = gsap.utils.toArray('.reveal-text')
+      const textElements = gsap.utils.toArray<HTMLElement>('.reveal-text')
       textElements.forEach((element, index) => {
         gsap.from(element, {
           opacity: 0,
