@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Educational Platform
 
-## Getting Started
+A cutting-edge educational platform built with Next.js 14, featuring a stunning UI/UX design, fluid animations, and seamless user experience.
 
-First, run the development server:
+![Platform Preview](public/preview.png)
+
+Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.online/)
+
+## ✨ Features
+
+### 🎯 Core Features
+- **Modern UI/UX**: Sleek, responsive design with fluid animations
+- **Dynamic Course Catalog**: Interactive course listings with detailed information
+- **Success Stories**: Engaging testimonials with horizontal scroll
+- **Interactive Elements**: Custom cursor effects and smooth transitions
+- **Performance Optimized**: Built with performance and SEO best practices
+
+### 🛠 Technical Features
+- Server-Side Rendering with Next.js 14
+- GSAP for complex animations
+- Framer Motion for UI interactions
+- Tailwind CSS for styling
+- TypeScript for type safety
+- Custom UI components
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:   ```
+   git clone https://github.com/Haseeb-WebDeveloper/online-courses.git   ```
+
+2. Install dependencies:   ```
+   bun install   ```
+
+3. Run the development server:   ```
+   bun run dev   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 🏗 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/                   # Next.js app directory
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── components/           
+│   ├── layout/           # Layout components
+│   │   ├── navbar.tsx    # Navigation bar
+│   │   ├── hero-section.tsx
+│   │   ├── about-section.tsx
+│   │   ├── courses-section.tsx
+│   │   ├── success-stories.tsx
+│   │   ├── cta-section.tsx
+│   │   └── footer.tsx
+│   └── ui/               # Reusable UI components
+│       ├── gsap-button.tsx
+│       ├── animated-cursor.tsx
+│       └── wave-background.tsx
+└── styles/               # Global styles
+    └── globals.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Components Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Layout Components
+- `Navbar`: Responsive navigation with animated mobile menu
+- `HeroSection`: Dynamic hero with animated statistics
+- `AboutSection`: Company/platform introduction
+- `CoursesSection`: Interactive course catalog with hover effects
+- `SuccessStories`: Testimonials with horizontal scroll animation
+- `CTASection`: Call-to-action with glass morphism effect
+- `Footer`: Clean, minimal footer with brand emphasis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### UI Components
+- `GSAPButton`: Custom animated button using GSAP
+- `AnimatedCursor`: Interactive cursor effects
+- `WaveBackground`: Dynamic wave animation background
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: 
+  - GSAP (GreenSock)
+  - Framer Motion
+- **Icons**: Lucide Icons
+- **Font**: Custom font with Geist Sans
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 Key Features Explained
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Animations
+- Smooth scroll animations using GSAP
+- Interactive hover effects with Framer Motion
+- Custom cursor interactions
+- Parallax scrolling effects
 
-## Deploy on Vercel
+### Responsive Design
+- Mobile-first approach
+- Adaptive layouts for all screen sizes
+- Touch-friendly interactions
+- Optimized images and assets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Performance
+- Server-side rendering
+- Optimized asset loading
+- Efficient animation handling
+- Minimal bundle size
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Development Guidelines
+
+### Styling Conventions
+- Use Tailwind CSS utilities
+- Follow BEM methodology for custom CSS
+- Maintain consistent spacing
+- Use CSS variables for theming
+
+### Component Structure
+- Functional components with TypeScript
+- Props interface definitions
+- Proper event handling
+- Responsive considerations
+
+## 🚀 Deployment
+
+The project is configured for easy deployment on Vercel:
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Configure environment variables
+4. Deploy
+
+
+## 🤝 Contact
+
+Haseeb Ahmed - [web.dev.haseeb@gmail.com](mailto:web.dev.haseeb@gmail.com)
+
+Connect with me on:
+- [LinkedIn](https://pk.linkedin.com/in/haseeb-ahmed-raza-khan)
+- [GitHub](https://github.com/Haseeb-WebDeveloper/)
+- [Instagram](https://www.instagram.com/haseeb.ahmed.raza.khan/)
+
+---
+
+Built with ❤️ by Haseeb Ahmed
