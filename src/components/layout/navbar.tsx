@@ -2,26 +2,33 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { GSAPButton } from "@/components/ui/gsap-button"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
-import { ArrowRight, Menu, Moon, Sun } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme } from "next-themes"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Features", href: "/features" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "#about" },
+  { name: "Stories", href: "#testimonials" },
+  { name: "Courses", href: "#courses" },
 ]
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
   const [hoveredPath, setHoveredPath] = React.useState("/")
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
+  
+  // Close mobile menu when clicking a link
+  const handleMobileNavClick = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -35,7 +42,7 @@ export function Navbar() {
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         
         {/* Navbar Content */}
-        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
+        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 pt-5 pb-2 flex items-center justify-between">
           {/* Logo */}
           <Link 
             href="/" 
@@ -101,11 +108,73 @@ export function Navbar() {
             <GSAPButton 
               variant="ghost"
               className="md:hidden"
+              onClick={toggleMobileMenu}
             >
-              <Menu className="h-5 w-5" />
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </GSAPButton>
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40"
+                onClick={handleMobileNavClick}
+              />
+
+              {/* Mobile Menu Panel */}
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", damping: 20 }}
+                className="fixed right-0 top-0 bottom-0 w-full bg-secondary/50 backdrop-blur-xl border-l border-primary/10 z-50"
+              >
+                {/* Close Button */}
+                <button
+                  onClick={handleMobileNavClick}
+                  className="absolute top-6 right-6 p-2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                <div className="flex flex-col h-[100vh] bg-background">
+                  {/* Mobile Navigation Links */}
+                  <div className="flex-1 px-8 pt-24 pb-8 space-y-2 bg-background">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={handleMobileNavClick}
+                        className="block px-4 py-4 text-lg font-medium rounded-lg hover:bg-primary/5 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Mobile CTA */}
+                  <div className="p-8 bg-background">
+                    <GSAPButton variant="mainPrimary" className="w-full py-6 text-lg">
+                      Get Started <ArrowRight className="w-5 h-5" />
+                    </GSAPButton>
+                  </div>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </motion.div>
     </header>
   )

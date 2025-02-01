@@ -139,7 +139,7 @@ export function CoursesSection() {
         style={{ filter: 'blur(320px)' }}
       /> */}
 
-      <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[2350px] mx-auto px-4 lg:px-12">
         <div className="">
           {/* Section Header */}
           <div className="text-center space-y-4 mb-16">

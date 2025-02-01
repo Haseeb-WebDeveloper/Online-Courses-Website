@@ -28,7 +28,7 @@ export function CTASection() {
               transition={{ delay: 0.1 }}
               className="text-lg text-muted-foreground"
             >
-              Join thousands of successful students and transform your future.
+              This is NOT just another online course – It's a roadmap to financial success. You get lifetime access – One-time payment, unlimited learning
             </motion.p>
           </div>
 

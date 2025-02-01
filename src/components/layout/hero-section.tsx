@@ -76,7 +76,7 @@ export function HeroSection() {
       
 
       {/* Content Container */}
-      <div className="max-w-[2350px] mx-auto px-6 lg:px-12 pb-16">
+      <div className="max-w-[2350px] mx-auto px-6 lg:px-12 pb-32 md:pb-24">
         <div className="max-w-[2350px] mx-auto text-center space-y-8">
           {/* Main Heading */}
           <motion.div
@@ -85,10 +85,9 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-custom">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-custom max-w-8xl mx-auto leading-loose">
               <span className="">
-                We only teach what we are 
-                really good at
+              Unlock Your Financial Freedom with Proven Strategies
               </span>
             </h1>
           </motion.div>
@@ -98,9 +97,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto"
           >
-            Join our community of learners and master the skills that matter most in today's digital landscape.
+            No fluff. No wasted time. Just real, actionable strategies
           </motion.p>
 
           {/* CTA Buttons */}
@@ -111,7 +110,7 @@ export function HeroSection() {
             className="flex flex-wrap items-center justify-center gap-4"
           >
             <GSAPButton variant="mainPrimary" className="text-base py-4">
-              Check Courses-Make an Impact <ArrowRight />
+              Check Courses<span className="hidden md:flex">Make an Impact </span><ArrowRight />
             </GSAPButton>
           </motion.div>
 

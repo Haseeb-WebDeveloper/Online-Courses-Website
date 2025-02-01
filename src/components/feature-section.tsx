@@ -44,17 +44,17 @@ export function FeatureSteps({
   }, [progress, features.length, autoPlayInterval])
 
   return (
-    <div className={cn("p-8 md:p-12 font-custom bg-red", className)}>
+    <div className={cn("font-custom py-12 md:pt-24", className)}>
        <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl" 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl" 
         style={{ filter: 'blur(320px)' }}
       />
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-10 text-center font-custom">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-16 text-center font-custom">
           {title}
         </h2>
 
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
+        <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-6 md:gap-10">
           <div className="order-2 md:order-1 space-y-8">
             {features.map((feature, index) => (
               <motion.div

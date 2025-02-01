@@ -41,16 +41,17 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-foreground/[0.01]">
+    <footer className="relative overflow-hidden bg-foreground/[0.01] max-w-[2350px] mx-auto px-6 lg:px-12">
       <div className="relative max-w-[2350px] mx-auto px-6 lg:px-4">
-        <div className="py-8">
-        <h1 className="text-[8vw] font-custom text-center">We are diffrent</h1>
+      <div className="py-4">
+            <h1 className="text-[4vw] font-custom text-center">Stop Watching, Start Winning</h1>
         </div>
         {/* Bottom Bar */}
         <div className=" py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Your Brand. All rights reserved.
           </p>
+         
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <span>•</span>

@@ -6,6 +6,7 @@ import { SuccessStories } from "@/components/layout/success-stories"
 import { CTASection } from "@/components/layout/cta-section"
 import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/navbar"
+import  OurJourneySection from "@/components/layout/our-journey-section"
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection />
       <CoursesSection />
       <SuccessStories />
+      <OurJourneySection />
       {/* <ScrollBasedVelocityDemo/> */}
       <CTASection />
       <Footer />
