@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -39,7 +40,7 @@ export function Navbar() {
         className="relative"
       >
         {/* Gradient line */}
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        {/* <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" /> */}
         
         {/* Navbar Content */}
         <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 pt-5 pb-2 flex items-center justify-between">
@@ -49,11 +50,8 @@ export function Navbar() {
             className="relative flex items-center gap-2 font-custom text-xl"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-primary/10 blur-xl rounded-full" />
-              <span className="relative bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                Course
-              </span>
-            </div>
+             <Image src="/logo.png" alt="logo" width={100} height={100} className="w-16 h-16" />
+             </div>
           </Link>
 
           {/* Desktop Navigation */}

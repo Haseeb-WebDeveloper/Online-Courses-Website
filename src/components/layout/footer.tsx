@@ -41,8 +41,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-foreground/[0.01] max-w-[2350px] mx-auto px-6 lg:px-12">
-      <div className="relative max-w-[2350px] mx-auto px-6 lg:px-4">
+    <footer className="relative overflow-hidden bg-foreground/[0.01]">
+      <div className="relative max-w-[2350px] mx-auto px-6 pt-2">
       <div className="py-4">
             <h1 className="text-[4vw] font-custom text-center">Stop Watching, Start Winning</h1>
         </div>
