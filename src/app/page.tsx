@@ -5,23 +5,26 @@ import { ScrollBasedVelocityDemo } from "@/components/layout/scrolling-txt";
 import { SuccessStories } from "@/components/layout/success-stories"
 import { CTASection } from "@/components/layout/cta-section"
 import { Footer } from "@/components/layout/footer"
-import { Navbar } from "@/components/layout/navbar"
 import  OurJourneySection from "@/components/layout/our-journey-section"
-
-
-
+import { NewCTASection } from "@/components/layout/new-cta-section"
+import { MissionSection } from "@/components/layout/mission-section"
+import { WhoThisIsForSection } from "@/components/layout/who-this-is-for"
+import { SpecialOffers } from "@/components/layout/special-offers"
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <AboutSection />
-      <CoursesSection />
-      <SuccessStories />
+      <MissionSection />
+      <WhoThisIsForSection />
       <OurJourneySection />
+      <CoursesSection />
+      <SpecialOffers />
+      <SuccessStories />
+      <NewCTASection />
       {/* <ScrollBasedVelocityDemo/> */}
-      <CTASection />
+      {/* <CTASection /> */}
       <Footer />
     </>
   );

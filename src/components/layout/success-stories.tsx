@@ -147,10 +147,10 @@ export function SuccessStories() {
       })
 
       gsap.from(".metric-item", {
-        y: 60,
+        y: 30,
         rotateX: 30,
         opacity: 0,
-        duration: 1,
+        duration: 0.4,
         stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
@@ -166,7 +166,7 @@ export function SuccessStories() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative pt-16 overflow-hidden bg-foreground/5">
+    <section id="stories" className="relative py-16 overflow-hidden bg-foreground/5">
       <div className="hidden lg:block">
         <motion.div 
           style={{ y: y1 }}

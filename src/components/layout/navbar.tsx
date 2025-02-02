@@ -10,16 +10,16 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Stories", href: "#testimonials" },
-  { name: "Courses", href: "#courses" },
+  { name: "Home", href: "hero" },
+  { name: "About", href: "about" },
+  { name: "Courses", href: "courses" },
+  { name: "Stories", href: "stories" },
 ]
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme()
   const [hoveredPath, setHoveredPath] = React.useState("/")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+  const { theme, setTheme } = useTheme()
   
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
   
@@ -28,8 +28,25 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault()
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const offset = 80 // Adjust this value based on your needs
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false)
+  }
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+    <header className="relative w-full z-50">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -58,26 +75,17 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-1 bg-secondary/50 backdrop-blur-lg border border-primary/5 p-1 rounded-full">
             {navigation.map((item) => (
               <Link
-                key={item.href}
-                href={item.href}
-                onMouseOver={() => setHoveredPath(item.href)}
+                key={item.name}
+                href={`#${item.href}`}
+                onClick={(e) => handleScroll(e, item.href)}
                 className={cn(
-                  "relative px-4 py-2 rounded-full text-sm transition-colors",
-                  "text-muted-foreground hover:text-primary"
+                  "px-4 py-2 text-sm transition-colors hover:text-primary rounded-full",
+                  hoveredPath === `#${item.href}`
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 )}
               >
-                <span className="relative z-10">{item.name}</span>
-                
-                {/* Hover Effect */}
-                {hoveredPath === item.href && (
-                  <motion.div
-                    layoutId="navbar-hover"
-                    className="absolute inset-0 bg-primary/[0.05] rounded-full"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  />
-                )}
+                {item.name}
               </Link>
             ))}
           </div>
@@ -152,10 +160,12 @@ export function Navbar() {
                   <div className="flex-1 px-8 pt-24 pb-8 space-y-2 bg-background">
                     {navigation.map((item) => (
                       <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={handleMobileNavClick}
-                        className="block px-4 py-4 text-lg font-medium rounded-lg hover:bg-primary/5 transition-colors"
+                        key={item.name}
+                        href={`#${item.href}`}
+                        onClick={(e) => handleScroll(e, item.href)}
+                        className={cn(
+                          "block px-4 py-4 text-lg font-medium rounded-lg hover:bg-primary/5 transition-colors"
+                        )}
                       >
                         {item.name}
                       </Link>

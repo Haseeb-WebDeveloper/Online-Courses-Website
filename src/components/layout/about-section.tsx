@@ -63,7 +63,7 @@ export function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section ref={sectionRef} className="relative py-32 overflow-hidden">
+    <section id="about" className="relative py-32 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-50" />
@@ -99,9 +99,11 @@ export function AboutSection() {
                 className="space-y-4"
               >
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  An entrepreneur who has built multiple profitable online businesses. Through years of experience, I've cracked the code to success in dropshipping, trading, and high-income online businesses.
+                Your Success Is My Mission <br />
+                I don't just teach theory—I give you my exact blueprint to success. If you're willing to put in the effort, I will show you the fastest way to build a highly profitable online business.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
+
                   I know what works—and more importantly, what doesn't work. My courses are designed to cut out the noise and give you a clear, step-by-step roadmap to success.
                 </p>
               </motion.div>

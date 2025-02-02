@@ -10,6 +10,7 @@ interface Feature {
   title?: string
   content: string
   image: string
+  icon?: string
 }
 
 interface FeatureStepsProps {
@@ -44,7 +45,7 @@ export function FeatureSteps({
   }, [progress, features.length, autoPlayInterval])
 
   return (
-    <div className={cn("font-custom py-12 md:pt-24", className)}>
+    <div className={cn("font-custom py-12 md:pt-16 px-4 md:px-12", className)}>
        <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl" 
         style={{ filter: 'blur(320px)' }}
@@ -68,12 +69,12 @@ export function FeatureSteps({
                   className={cn(
                     "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2",
                     index === currentFeature
-                      ? "bg-primary border-primary text-primary-foreground scale-110"
+                      ? "bg-primary/10 border- text--foreground scale-110"
                       : "bg-muted border-muted-foreground",
                   )}
                 >
                   {index <= currentFeature ? (
-                    <span className="text-lg font-bold">✓</span>
+                    <span className="text-lg font-bold">{feature.icon}</span>
                   ) : (
                     <span className="text-lg ">{index + 1}</span>
                   )}

@@ -44,7 +44,7 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-foreground/[0.01]">
       <div className="relative max-w-[2350px] mx-auto px-6 pt-2">
       <div className="py-4">
-            <h1 className="text-[4vw] font-custom text-center">Stop Watching, Start Winning</h1>
+            <h1 className="text-[6vw] md:text-[4vw] font-custom text-center">Stop Watching, Start Winning</h1>
         </div>
         {/* Bottom Bar */}
         <div className=" py-6 flex flex-col md:flex-row justify-between items-center gap-4">
