@@ -24,7 +24,7 @@ export function MissionSection() {
           >
             <div className="relative aspect-square rounded-2xl overflow-hidden">
               <Image
-                src="/profile.jpg" // Make sure to add this image to your public folder
+                src="/profile-2.jpg" // Make sure to add this image to your public folder
                 alt="Mission"
                 fill
                 className="object-cover"
@@ -34,8 +34,8 @@ export function MissionSection() {
             </div>
             
             {/* Stats overlay */}
-            <div className="absolute bottom-8 left-8 right-8">
-              <div className="grid grid-cols-2 gap-4">
+            {/* <div className="absolute bottom-8 left-8 right-8">
+              <div className="grid grid-cols-2 gap-4 font-custom">
                 <div className="bg-background/80 backdrop-blur-sm p-4 rounded-xl border border-primary/10">
                   <div className="text-3xl font-bold text-primary">500+</div>
                   <div className="text-sm text-muted-foreground">Success Stories</div>
@@ -45,7 +45,7 @@ export function MissionSection() {
                   <div className="text-sm text-muted-foreground">Success Rate</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Column - Content */}
@@ -64,7 +64,7 @@ export function MissionSection() {
                 I don't just teach theory—I give you my exact blueprint to success. If you're willing to put in the effort, I will show you the fastest way to build a highly profitable online business.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {[
                   "No prior experience needed – Just follow the steps",
                   "Proven results – My students are making real money",
@@ -78,14 +78,14 @@ export function MissionSection() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10 hover:bg-primary/10 transition-colors"
                   >
-                    <span className="text-2xl">📌</span>
-                    <span className="text-lg">{point}</span>
+                    <span className="text-lg">📌</span>
+                    <span className="text-base">{point}</span>
                   </motion.div>
                 ))}
               </div>
 
               <div className="pt-6">
-                <GSAPButton variant="mainPrimary" className="w-full sm:w-auto">
+                <GSAPButton variant="mainPrimary" href="#courses" className="w-full sm:w-auto">
                   Start Your Journey <ArrowRight className="w-4 h-4" />
                 </GSAPButton>
               </div>

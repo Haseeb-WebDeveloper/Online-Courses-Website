@@ -10,10 +10,10 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 
 const navigation = [
-  { name: "Home", href: "hero" },
   { name: "About", href: "about" },
   { name: "Courses", href: "courses" },
   { name: "Stories", href: "stories" },
+  { name: "Contact", href: "contact" },
 ]
 
 export function Navbar() {
@@ -60,7 +60,7 @@ export function Navbar() {
         {/* <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" /> */}
         
         {/* Navbar Content */}
-        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 pt-5 pb-2 flex items-center justify-between">
+        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 md:pt-5 md:pb-2 flex items-center justify-between">
           {/* Logo */}
           <Link 
             href="/" 
@@ -103,9 +103,11 @@ export function Navbar() {
 
             {/* CTA Button */}
             <GSAPButton 
+              href="#courses"
               variant="primary" 
               className="hidden sm:inline-flex"
             >
+
               <span>Get Started</span>
               <ArrowRight className="h-5 w-5" />
             </GSAPButton>
@@ -135,7 +137,7 @@ export function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40"
+                className="fixed inset-0 z-40"
                 onClick={handleMobileNavClick}
               />
 

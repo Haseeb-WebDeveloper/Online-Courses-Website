@@ -68,28 +68,30 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-screen pt-16 overflow-hidden">
+    <section id="hero" className="relative pt-16 pb-24 md:py-24 overflow-hidden">
       {/* Background Elements */}
       {/* <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" /> */}
       <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] overflow-hidden bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
       
 
       {/* Content Container */}
-      <div className="max-w-[2350px] mx-auto px-6 lg:px-12 pb-32 md:pb-16">
-        <div className="max-w-[2350px] mx-auto text-center space-y-8">
+      <div className="max-w-[2350px] mx-auto px-6">
+        <div className=" text-center space-y-8">
           {/* Main Heading */}
           <motion.div
+
 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-custom max-w-8xl mx-auto leading-loose">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-custom max-w-6xl mx-auto leading-normal ">
               <span className="">
-              Unlock Your Financial Freedom with Proven Strategies
+                Unlock Your Financial Freedom with Proven Strategies
               </span>
+
             </h1>
           </motion.div>
 
@@ -110,7 +112,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <GSAPButton variant="mainPrimary" className="text-base py-4">
+            <GSAPButton variant="mainPrimary" href="#courses" className="text-base py-4">
               Check Courses<span className="hidden md:flex">Make an Impact </span><ArrowRight />
             </GSAPButton>
           </motion.div>

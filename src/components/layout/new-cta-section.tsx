@@ -59,7 +59,7 @@ export function NewCTASection() {
   }
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-32 bg-background">
+    <section id="contact" className="relative overflow-hidden py-16 md:py-24 bg-background">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-50" />

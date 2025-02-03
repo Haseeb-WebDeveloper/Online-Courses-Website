@@ -3,14 +3,16 @@
 import * as React from "react"
 import { gsap } from "gsap"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface GSAPButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   variant?: "primary" | "mainPrimary" | "ghost"
+  href?: string
 }
 
 export const GSAPButton = React.forwardRef<HTMLButtonElement, GSAPButtonProps>(
-  ({ children, className, variant = "primary", ...props }, ref) => {
+  ({ children, className, variant = "primary", href, ...props }, ref) => {
     const buttonRef = React.useRef<HTMLButtonElement>(null)
     const rippleRef = React.useRef<HTMLDivElement>(null)
 
@@ -85,34 +87,38 @@ export const GSAPButton = React.forwardRef<HTMLButtonElement, GSAPButtonProps>(
       return () => ctx.revert()
     }, [variant])
 
+    const ButtonWrapper = href ? Link : 'div'
+
     return (
-      <button
-        ref={buttonRef}
-        className={cn(
-          "relative inline-flex items-center justify-center overflow-hidden transition-colors",
-          variant === "primary" && 
-            "bg-primary text-primary-foreground h-10 px-6 rounded-full font-medium hover:bg-primary/90",
-          variant === "mainPrimary" && 
-            "bg-primary text-primary-foreground h-12 px-6 rounded-full font-medium hover:bg-primary/90",
-          variant === "ghost" && 
-            "text-primary hover:bg-primary/5 h-10 w-10 rounded-full flex items-center justify-center",
-          className
-        )}
-        {...props}
-      >
-        <span className="relative z-10 flex items-center justify-center gap-2">
-          {children}
-        </span>
-        <div
-          ref={rippleRef}
+      <ButtonWrapper href={href || ''}>
+        <button
+          ref={buttonRef}
           className={cn(
-            "absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none opacity-0",
-            variant === "primary" ? "bg-white/30" : "bg-primary/20"
+            "relative inline-flex items-center justify-center overflow-hidden transition-colors",
+            variant === "primary" && 
+              "bg-primary text-primary-foreground h-10 px-6 rounded-full font-medium hover:bg-primary/90",
+            variant === "mainPrimary" && 
+              "bg-primary text-primary-foreground h-12 px-6 rounded-full font-medium hover:bg-primary/90",
+            variant === "ghost" && 
+              "text-primary hover:bg-primary/5 h-10 w-10 rounded-full flex items-center justify-center",
+            className
           )}
-        />
-      </button>
+          {...props}
+        >
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            {children}
+          </span>
+          <div
+            ref={rippleRef}
+            className={cn(
+              "absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none opacity-0",
+              variant === "primary" ? "bg-white/30" : "bg-primary/20"
+            )}
+          />
+        </button>
+      </ButtonWrapper>
     )
   }
 )
 
-GSAPButton.displayName = "GSAPButton" 
+GSAPButton.displayName = "GSAPButton"

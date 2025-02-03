@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 const courses = [
   {
     id: 1,
-    title: "Packages 01",
+    title: "Package 01",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
     price: "2500",
@@ -30,7 +30,7 @@ const courses = [
   },
   {
     id: 2,
-    title: "Packages 02",
+    title: "Package 02",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
     price: "5000",
@@ -49,7 +49,7 @@ const courses = [
   },
   {
     id: 3,
-    title: "Packages 03",
+    title: "Package 03",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
     price: 2500,
