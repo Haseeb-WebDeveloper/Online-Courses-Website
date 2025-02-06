@@ -12,30 +12,37 @@ const offers = [
     originalPrice: "2000zł",
     discountedPrice: "750zł",
     savings: "Save 50%",
-
     features: [
-      "Choose any 2 courses",
-      "Lifetime access to selected courses",
-      "Access to private Discord community",
-      "24/7 Support",
+      "Wybierz jeden z dwóch Kursów",
+      "Dożywotni dostęp do wybranego kursu",
+      "Dostęp do zamkniętej grupy",
+      "Pomoc 24/7",
     ],
-    highlight: "Most Flexible"
+    highlight: "Most Flexible",
+    link: {
+      "Ecommerce": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD",
+      "Trading": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow"
+    }
   },
   {
     id: 2,
-    title: "All Access Bundle",
+    title: "Masterclass all in bundle",
     description: "Get unlimited access to all our premium courses",
     originalPrice: "5000zł",
     discountedPrice: "3000zł > 900zł",
     savings: "Save 67%",
 
     features: [
-      "Access to all courses",
-      "Priority support",
-      "Exclusive mentorship sessions",
-      "Lifetime updates",
+      "Dostep do wszystkich kursów",
+      "Priorytetowa Pomoc 24/7",
+      "Godzinna pomoc raz w miesiącu od Eksperta",
+      "Dożywotni dostęp z aktualizacjami",
     ],
-    highlight: "Best Value"
+    highlight: "Best Value",
+    link: {
+      "Enroll Now": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
+    }
+
   }
 ]
 
@@ -129,9 +136,18 @@ export function SpecialOffers() {
                   </ul>
 
                   {/* CTA */}
-                  <GSAPButton variant="mainPrimary" className="w-full">
-                    Get Started <ArrowRight className="w-4 h-4" />
-                  </GSAPButton>
+                  <div className="flex items-center gap-2 w-full justify-center">
+                    {Object.entries(offer.link).map(([label, url]) => (
+                      <GSAPButton 
+                        key={label}
+                        variant="mainPrimary" 
+                        className="w-full"
+                        href={url}
+                      >
+                        {label} <ArrowRight className="w-4 h-4" />
+                      </GSAPButton>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

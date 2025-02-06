@@ -14,58 +14,73 @@ gsap.registerPlugin(ScrollTrigger)
 const courses = [
   {
     id: 1,
-    title: "Trading",
+    title: "Sh0 Elite Club - eCommerce",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
-    price: "2500",
-    originalPrice: "4000",
+    price: "2499zł",
+    originalPrice: "5000zł",
     features: [
-      "Organic Dropshipping Course",
-      "Dropshipping tiktok/fb ads course",
-      "Access to a closed Discord group with people similar to you",
-      "lifetime access to the course"
+      "Dropshipping organiczny od podstaw",
+      "Dropshipping Przez Meta / Tiktok ADS",
+      "Tworzenie Viralowych Tiktoków",
+      "Budowa idealnego sklepu na Shopify",
+      "Codziennie Spotkania na voice chacie",
+      "Dostep do zamkniętej grupy ludzi takich jak ty!",
+      "Dożywotni dostęp do naszej platformy",
+      "Pomoc 24/7"
     ],
     tag: "Most Popular",
-    link: "https://buy.stripe.com/bIY3eXf5Q48c9m83cd",
-    discount: "40% OFF"
+    link: "https://buy.stripe.com/eVa9Dl1f02042XKdQW",
+    discount: "50% OFF"
+  },
+  {
+    id: 3,
+    title: "Sh0 Elite Club - MasterClass",
+    description: "One time payment for all the courses and resources.",
+    image: "/course.webp",
+    price: "4999zł",
+    originalPrice: "10000zł",
+    features: [
+      "Dropshipping organiczny od podstaw",
+      "Dropshipping Przez Meta / Tiktok ADS",
+      "Tworzenie Viralowych Tiktoków",
+      "Budowa idealnego sklepu na Shopify",
+      "Codziennie Spotkania na voice chacie",
+      "Kompletny przewodnik po strategi SMC + ICT + Wyckoff",
+      "Psychologia w tradingu",
+      "Najlepsze aplikacje firmy i brokerzy",
+      "Trading journal - śledź swoje trade'y",
+      "Networking",
+      "Afiliacja",
+      "Mindset i zarządzanie pieniędzmi",
+      "Pomoc 24/7",
+      "Dostep do zamkniętej grupy ludzi takich jak ty!",
+      "Dożywotni dostęp do naszej platformy"
+    ],
+    tag: "Trending",
+    link: "https://buy.stripe.com/7sIeXF1f0eMQbug5ko",
+    discount: "50% OFF"
   },
   {
     id: 2,
-    title: "Organic Dropshipping",
+    title: "Sh0 Elite Club - Trading",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
-    price: "2500",
-    originalPrice: "5000",
+    price: "2499zł",
+    originalPrice: "5000zł",
     features: [
-      "Organic Dropshipping",
-      "Dropshipping tiktok/fb ads",
-      // "Affiliation",
-      // "Networking",
-      // "Trading",
-      // "Business and your finances",
-      "Lifetime access to signal group",
+      "Kompletny przewodnik po strategi SMC + ICT + Wyckoff",
+      "Psychologia w tradingu",
+      "Najlepsze aplikacje firmy i brokerzy",
+      "Trading journal - śledź swoje trade'y",
+      "Codziennie Spotkania na voice chacie",
+      "Dostep do zamkniętej grupy ludzi takich jak ty!",
+      "Dożywotni dostęp do naszej platformy",
+      "Pomoc 24/7"
     ],
     tag: "Recommended",
-    link: "https://buy.stripe.com/4gwg1J6zkbAE9m8aEG",
+    link: "https://buy.stripe.com/dR68zhf5QawA1TG7sB",
     discount: "50% OFF"
-  },
-
-  {
-    id: 3,
-    title: "Package 03",
-    description: "One time payment for all the courses and resources.",
-    image: "/course.webp",
-    price: 2500,
-    originalPrice: 4000,
-    features: [
-      "Trading course",
-      "Business and your finances",
-      "Access to a closed Discord group with people similar to you",
-      "lifetime access to the course"
-    ],
-    tag: "Trending",
-    link: "https://buy.stripe.com/00g8zhcXI7ko69WcMP",
-    discount: "40% OFF"
   },
 ]
 
