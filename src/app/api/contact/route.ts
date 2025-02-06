@@ -17,10 +17,11 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: process.env.SENDER_EMAIL,
-      to: process.env.SENDER_EMAIL,
+      to: process.env.COMPANY_EMAIL,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
+
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong> ${message}</p>

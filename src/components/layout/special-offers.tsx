@@ -10,7 +10,7 @@ const offers = [
     title: "2 Course Bundle",
     description: "Choose any 2 courses from our premium collection",
     originalPrice: "2000zł",
-    discountedPrice: "1500zł > 750zł",
+    discountedPrice: "750zł",
     savings: "Save 50%",
 
     features: [

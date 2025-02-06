@@ -7,13 +7,14 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, CheckCircle2, TrendingUp } from "lucide-react"
 import { GSAPButton } from "../ui/gsap-button"
 import Image from "next/image"
+import Link from "next/link"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const courses = [
   {
     id: 1,
-    title: "Package 01",
+    title: "Trading",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
     price: "2500",
@@ -25,28 +26,30 @@ const courses = [
       "lifetime access to the course"
     ],
     tag: "Most Popular",
-
+    link: "https://buy.stripe.com/bIY3eXf5Q48c9m83cd",
     discount: "40% OFF"
   },
   {
     id: 2,
-    title: "Package 02",
+    title: "Organic Dropshipping",
     description: "One time payment for all the courses and resources.",
     image: "/course.webp",
-    price: "5000",
-    originalPrice: "10000",
+    price: "2500",
+    originalPrice: "5000",
     features: [
       "Organic Dropshipping",
       "Dropshipping tiktok/fb ads",
-      "Affiliation",
-      "Networking",
-      "Trading",
+      // "Affiliation",
+      // "Networking",
+      // "Trading",
+      // "Business and your finances",
       "Lifetime access to signal group",
-      "Business and your finances",
     ],
     tag: "Recommended",
+    link: "https://buy.stripe.com/4gwg1J6zkbAE9m8aEG",
     discount: "50% OFF"
   },
+
   {
     id: 3,
     title: "Package 03",
@@ -61,9 +64,11 @@ const courses = [
       "lifetime access to the course"
     ],
     tag: "Trending",
+    link: "https://buy.stripe.com/00g8zhcXI7ko69WcMP",
     discount: "40% OFF"
   },
 ]
+
 
 export function CoursesSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -189,9 +194,15 @@ export function CoursesSection() {
                         </div>
                       </div>
                       <GSAPButton variant="primary" className="shadow-lg shadow-primary/10">
-                        Enroll Now <ArrowRight className="w-4 h-4" />
+                        <Link href={course.link} className="flex items-center gap-2">
+                          <span>Enroll Now</span> <ArrowRight className="w-4 h-4" />
+                        </Link>
                       </GSAPButton>
+
+
+
                     </div>
+
                   </div>
 
                   {/* Hover Gradient */}
