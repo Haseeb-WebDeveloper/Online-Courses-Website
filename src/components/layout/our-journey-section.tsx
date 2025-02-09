@@ -38,6 +38,7 @@ const features = [
   },
 ]
 
+
 export default function OurJourneySection() {
   return (
       <FeatureSteps 
