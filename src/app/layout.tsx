@@ -28,8 +28,8 @@ const customFont  = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Online Courses",
-  description: "Online Courses",
+  title: "Unlock Financial Freedom | Proven Online Business Strategies by Sho B",
+  description: "Learn proven strategies to build a profitable online business with Sho B. Join 20K+ students and unlock your financial freedom through expert eCommerce and trading courses.",
 };
 
 export default function RootLayout({
