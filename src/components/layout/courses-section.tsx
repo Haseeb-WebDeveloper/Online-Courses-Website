@@ -4,10 +4,11 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, CheckCircle2, TrendingUp } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { GSAPButton } from "../ui/gsap-button"
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "../ui/button"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -16,9 +17,9 @@ const courses = [
     id: 1,
     title: "Sh0 Elite Club - eCommerce",
     description: "One time payment for all the courses and resources.",
-    image: "/course.webp",
-    price: "2499zł",
-    originalPrice: "5000zł",
+    image: "/ecommerce.png",
+    price: "2499",
+    originalPrice: "5000",
     features: [
       "Dropshipping organiczny od podstaw",
       "Dropshipping Przez Meta / Tiktok ADS",
@@ -30,16 +31,27 @@ const courses = [
       "Pomoc 24/7"
     ],
     tag: "Most Popular",
-    link: "https://buy.stripe.com/eVa9Dl1f02042XKdQW",
+    link: [
+      // {
+      //   name: "Ecommerce",
+      //   price:"2499",
+      //   stripeLink:"https://buy.stripe.com/aEUg31dHY1nseqI00y"
+      // },
+      {
+        name: "Ecommerce",
+        price:"1249",
+        stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
+      }
+    ],
     discount: "50% OFF"
   },
   {
     id: 3,
     title: "Sh0 Elite Club - MasterClass",
     description: "One time payment for all the courses and resources.",
-    image: "/course.webp",
-    price: "4999zł",
-    originalPrice: "10000zł",
+    image: "/masterclass.png",
+    price: "4999",
+    originalPrice: "10000",
     features: [
       "Dropshipping organiczny od podstaw",
       "Dropshipping Przez Meta / Tiktok ADS",
@@ -58,16 +70,27 @@ const courses = [
       "Dożywotni dostęp do naszej platformy"
     ],
     tag: "Trending",
-    link: "https://buy.stripe.com/7sIeXF1f0eMQbug5ko",
+    link: [
+      // {
+      //   name: "Masterclass",
+      //   price:"4999",
+      //   stripeLink:"https://buy.stripe.com/7sIcQP33kfeieqIcNo"
+      // },
+      {
+        name: "Masterclass",
+        price:"1999",
+        stripeLink:"https://buy.stripe.com/6oE2cb7jAfeiaas9Bd"
+      }
+    ],
     discount: "50% OFF"
   },
   {
     id: 2,
     title: "Sh0 Elite Club - Trading",
     description: "One time payment for all the courses and resources.",
-    image: "/course.webp",
-    price: "2499zł",
-    originalPrice: "5000zł",
+    image: "/trading.png",
+    price: "2499",
+    originalPrice: "5000",
     features: [
       "Kompletny przewodnik po strategi SMC + ICT + Wyckoff",
       "Psychologia w tradingu",
@@ -79,11 +102,21 @@ const courses = [
       "Pomoc 24/7"
     ],
     tag: "Recommended",
-    link: "https://buy.stripe.com/dR68zhf5QawA1TG7sB",
+    link: [
+      // {
+      //   name: "Trading",
+      //   price:"2499",
+      //   stripeLink:"https://buy.stripe.com/fZeg31avMaY2ciA9Ba"
+      // },
+      {
+        name: "Trading",
+        price:"1249",
+        stripeLink:"https://buy.stripe.com/4gw5on7jAc260zS3cN"
+      }
+    ],
     discount: "50% OFF"
   },
 ]
-
 
 export function CoursesSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -111,13 +144,6 @@ export function CoursesSection() {
 
   return (
     <section id="courses" className="relative py-24 overflow-hidden">
-      {/* Background Elements */}
-      {/* <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" /> */}
-      {/* <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl" 
-        style={{ filter: 'blur(320px)' }}
-      /> */}
-
       <div className="max-w-[2350px] mx-auto px-4 lg:px-12">
         <div className="">
           {/* Section Header */}
@@ -146,15 +172,14 @@ export function CoursesSection() {
               <div key={course.id} className="course-card group">
                 <div className="relative bg-background/50 border border-primary/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
                   {/* Course Image */}
-                  <div className="relative h-52 overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden">
                     <Image 
                       src={course.image} 
                       alt={course.title}
                       width={400}
                       height={300}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover aspect-video object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    {/* <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" /> */}
                     
                     {/* Tags Container */}
                     <div className="absolute top-4 left-4 flex gap-2 z-20">
@@ -169,7 +194,6 @@ export function CoursesSection() {
                           {course.discount}
                         </div>
                       )}
-
                     </div>
                   </div>
 
@@ -197,27 +221,14 @@ export function CoursesSection() {
 
                     {/* Price and CTA */}
                     <div className="pt-5 flex items-center justify-between border-t border-primary/10">
-                      <div className="space-y-1">
-                        {/* <p className="text-sm text-muted-foreground">Investment</p> */}
-                        <div className="flex items-center gap-2">
-                          <p className="text-2xl font-semibold">{course.price}zł</p>
-                          {course.originalPrice && (
-                            <p className="text-sm text-muted-foreground line-through">
-                              {course.originalPrice}zł
-                            </p>
-                          )}
-                        </div>
+                      <div className="flex gap-2 w-full justify-between">
+                        {course.link.map((linkItem, index) => (
+                            <Link key={index} href={linkItem.stripeLink} className="w-full h-full py-2 px-2 rounded-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground before:absolute before:inset-0 before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.1)_inset] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2)_inset]">
+                              <span className="">{linkItem.name} {linkItem.price}zł</span> <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        ))}
                       </div>
-                      <GSAPButton variant="primary" className="shadow-lg shadow-primary/10">
-                        <Link href={course.link} className="flex items-center gap-2">
-                          <span>Enroll Now</span> <ArrowRight className="w-4 h-4" />
-                        </Link>
-                      </GSAPButton>
-
-
-
                     </div>
-
                   </div>
 
                   {/* Hover Gradient */}

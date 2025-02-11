@@ -6,13 +6,11 @@ import React from "react";
 export function ScrollBasedVelocityDemo() {
   return (
     <div className="w-full pb-36 pt-4">
-      <div className="">
+      <div>
         <div className="w-full mx-auto">
           <div
             className={cn(
               "rounded-xl w-full ",
-              "",
-              "",
               "flex items-center justify-center"
             )}
           >
@@ -25,7 +23,7 @@ export function ScrollBasedVelocityDemo() {
         </div>
       </div>
 
-      <div className="" aria-hidden="true" />
+      <div aria-hidden="true" />
     </div>
   );
 }
