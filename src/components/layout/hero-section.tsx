@@ -11,22 +11,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
   {
-    label: "Active Students",
+    label: "Aktywnych Studentów",
     value: "20K+",
     icon: Users,
-    description: "Learning and growing"
+    description: "Uczy się i rozwija"
   },
   {
-    label: "Course Rating",
+    label: "Ocena Kursu",
     value: "4.9",
     icon: Star,
-    description: "Highly rated content"
+    description: "Wysoko oceniane treści"
   },
   {
-    label: "Course Completion",
+    label: "Skuteczność Kursu",
     value: "94%",
     icon: TrendingUp,
-    description: "Success rate"
+    description: "Sukces"
   }
 ]
 
@@ -71,8 +71,7 @@ export function HeroSection() {
     <section id="hero" className="relative pt-16 pb-24 md:py-24 overflow-hidden">
       {/* Background Elements */}
       {/* <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" /> */}
-      <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] overflow-hidden bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      {/* <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] overflow-hidden bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" /> */}
       
 
       {/* Content Container */}
@@ -80,16 +79,14 @@ export function HeroSection() {
         <div className=" text-center space-y-8">
           {/* Main Heading */}
           <motion.div
-
-
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-custom max-w-6xl mx-auto leading-normal ">
+            <h1 className="text-4xl md:text-6xl font-custom max-w-6xl mx-auto leading-normal ">
               <span className="">
-                Unlock Your Financial Freedom with Proven Strategies
+                Odkryj swoją Wolność Finansową z Prowadzonych Strategii
               </span>
 
             </h1>
@@ -102,7 +99,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto"
           >
-            No fluff. No wasted time. Just real, actionable strategies
+            Bez zbędnych informacji. Bez zbędnego czasu. Tylko realne, działające strategie
           </motion.p>
 
           {/* CTA Buttons */}
@@ -113,7 +110,7 @@ export function HeroSection() {
             className="flex flex-wrap items-center justify-center gap-4"
           >
             <GSAPButton variant="mainPrimary" href="#courses" className="text-base py-4">
-              Check Courses<span className="hidden md:flex">Make an Impact </span><ArrowRight />
+              Sprawdź Kursy<span className="hidden md:flex">Zrób Wpływ </span><ArrowRight />
             </GSAPButton>
           </motion.div>
 

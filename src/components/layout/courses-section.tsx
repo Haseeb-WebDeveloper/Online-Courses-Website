@@ -11,12 +11,11 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 
 gsap.registerPlugin(ScrollTrigger)
-
 const courses = [
   {
     id: 1,
     title: "Sh0 Elite Club - eCommerce",
-    description: "One time payment for all the courses and resources.",
+    description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/ecommerce.png",
     price: "2499",
     originalPrice: "5000",
@@ -30,25 +29,20 @@ const courses = [
       "Dożywotni dostęp do naszej platformy",
       "Pomoc 24/7"
     ],
-    tag: "Most Popular",
+    tag: "Najpopularniejszy",
     link: [
-      // {
-      //   name: "Ecommerce",
-      //   price:"2499",
-      //   stripeLink:"https://buy.stripe.com/aEUg31dHY1nseqI00y"
-      // },
       {
         name: "Ecommerce",
         price:"1249",
         stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
       }
     ],
-    discount: "50% OFF"
+    discount: "50% ZNIŻKI"
   },
   {
     id: 3,
     title: "Sh0 Elite Club - MasterClass",
-    description: "One time payment for all the courses and resources.",
+    description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/masterclass.png",
     price: "4999",
     originalPrice: "10000",
@@ -69,25 +63,20 @@ const courses = [
       "Dostep do zamkniętej grupy ludzi takich jak ty!",
       "Dożywotni dostęp do naszej platformy"
     ],
-    tag: "Trending",
+    tag: "Na czasie",
     link: [
-      // {
-      //   name: "Masterclass",
-      //   price:"4999",
-      //   stripeLink:"https://buy.stripe.com/7sIcQP33kfeieqIcNo"
-      // },
       {
         name: "Masterclass",
         price:"1999",
         stripeLink:"https://buy.stripe.com/6oE2cb7jAfeiaas9Bd"
       }
     ],
-    discount: "50% OFF"
+    discount: "50% ZNIŻKI"
   },
   {
     id: 2,
     title: "Sh0 Elite Club - Trading",
-    description: "One time payment for all the courses and resources.",
+    description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/trading.png",
     price: "2499",
     originalPrice: "5000",
@@ -101,20 +90,15 @@ const courses = [
       "Dożywotni dostęp do naszej platformy",
       "Pomoc 24/7"
     ],
-    tag: "Recommended",
+    tag: "Polecany",
     link: [
-      // {
-      //   name: "Trading",
-      //   price:"2499",
-      //   stripeLink:"https://buy.stripe.com/fZeg31avMaY2ciA9Ba"
-      // },
       {
         name: "Trading",
         price:"1249",
         stripeLink:"https://buy.stripe.com/4gw5on7jAc260zS3cN"
       }
     ],
-    discount: "50% OFF"
+    discount: "50% ZNIŻKI"
   },
 ]
 
@@ -154,7 +138,7 @@ export function CoursesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Premium Courses for Premium Results
+              Premium Kursy dla Premium Wyników
             </motion.h2>
             <motion.p 
               className="text-lg text-muted-foreground max-w-2xl mx-auto"
@@ -162,7 +146,7 @@ export function CoursesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Choose your path to success with our expertly crafted courses
+              Wybierz swoją drogę do sukcesu z naszymi profesjonalnie stworzonymi kursami
             </motion.p>
           </div>
 
@@ -230,7 +214,6 @@ export function CoursesSection() {
                       </div>
                     </div>
                   </div>
-
                   {/* Hover Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 </div>

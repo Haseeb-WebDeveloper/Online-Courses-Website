@@ -118,7 +118,7 @@ export function Sidebar() {
         {/* Bottom Section */}
         <div className="p-6 border-t border-primary/10">
           <GSAPButton variant="mainPrimary" className="w-full">
-            Get Started <ArrowRight className="w-5 h-5" />
+          Rozpocznij <ArrowRight className="w-5 h-5" />
           </GSAPButton>
         </div>
       </motion.div>

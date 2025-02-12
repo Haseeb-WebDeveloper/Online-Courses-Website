@@ -2,37 +2,37 @@ import { FeatureSteps } from "@/components/feature-section"
 
 const features = [
   { 
-    step: 'Step 1', 
-    title: 'Step-by-Step Training',
-    content: 'No vague theory, only actionable strategies', 
+    step: 'Krok 1', 
+    title: 'Krok po kroku',
+    content: 'Bez niejasnych teorii, tylko działające strategie', 
     icon: '💼',
     image: '/step-by-step.jpg' 
   },
   { 
-    step: 'Step 2',
-    title: 'Real-World Case Studies',
-    content: 'Learn from actual businesses making money',
+    step: 'Krok 2',
+    title: 'Rzeczywiste Studie Przypadków',
+    content: 'Naucz się od rzeczywistych firm generujących pieniądze',
     icon: '📊',
     image: '/Real-World-Case-Studies.jpg'
   },
   { 
-    step: 'Step 3',
-    title: 'Exclusive Strategies',
-    content: 'The same methods I use to generate profits daily',
+    step: 'Krok 3',
+    title: 'Ekskluzywne Strategie',
+    content: 'Te same metody, które używam do generowania zysków każdego dnia',
     icon: '🔥',
     image: '/Strategies.jpg'
   },
   { 
-    step: 'Step 3',
-    title: 'Community Support',
-    content: 'Surround yourself with winners in our private Discord',
+    step: 'Krok 4',
+    title: 'Wsparcie Społeczności',
+    content: 'Otocz się zwycięzcami w naszej prywatnej grupie Discord',
     icon: '🎯',
     image: '/Support.jpg'
   },
   { 
-    step: 'Step 3',
-    title: 'Live Updates',
-    content: 'Stay ahead with new insights & strategies',
+    step: 'Krok 5',
+    title: 'Aktualizacje na żywo',
+    content: 'Zostawaj na bieżąco z nowymi wglądemmi & strategiami',
     icon: '📈',
     image: '/update.avif'
   },
@@ -43,7 +43,7 @@ export default function OurJourneySection() {
   return (
       <FeatureSteps 
         features={features}
-        title="What You Get Inside My Courses"
+        title="Co otrzymasz w moich kursach"
         autoPlayInterval={4000}
         imageHeight="h-[550px]"
       />

@@ -29,7 +29,7 @@ const targetAudience = [
 
 export function WhoThisIsForSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-foreground/5">
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
@@ -40,11 +40,11 @@ export function WhoThisIsForSection() {
             className="space-y-12"
           >
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-custom">
-                Who This Is For
+              <h2 className="text-4xl md:text-4xl lg:text-5xl font-custom">
+                Dla kogo jest ten kurs?
               </h2>
               <p className="text-lg text-muted-foreground">
-                Join thousands of successful students who have transformed their lives through our program
+                Dołącz do tysięcy sukcesowych studentów, którzy przekształcili swoje życia dzięki naszemu programowi
               </p>
             </div>
 

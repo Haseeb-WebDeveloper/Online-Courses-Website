@@ -23,18 +23,18 @@ const socialLinks = [
 const achievements = [
   {
     icon: Users2,
-    title: "Community",
-    description: "Join an exclusive network of successful entrepreneurs"
+    title: "Społeczność",
+    description: "Dołącz do ekskluzywnej sieci odnoszących sukcesy przedsiębiorców"
   },
   {
     icon: Trophy,
-    title: "Track Record",
-    description: "Students consistently achieving 6-figure results"
+    title: "Udokumentowane Osiągnięcia",
+    description: "Studenci regularnie osiągają wyniki sześciocyfrowe"
   },
   {
     icon: Target,
-    title: "Clear Path",
-    description: "Step-by-step roadmap to online success"
+    title: "Jasna Ścieżka",
+    description: "Szczegółowy plan działania do sukcesu online"
   }
 ]
 
@@ -84,14 +84,14 @@ export function AboutSection() {
                 variants={itemVariants}
                 className="block text-sm uppercase tracking-wider text-primary/60"
               >
-                About Me
+                O Mnie
               </motion.span>
               
               <motion.h2 
                 variants={itemVariants}
                 className="block text-4xl md:text-5xl font-custom"
               >
-                Hi, I'm Sho B
+                Cześć, jestem Sho B
               </motion.h2>
 
               <motion.div 
@@ -99,12 +99,11 @@ export function AboutSection() {
                 className="space-y-4"
               >
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                Your Success Is My Mission <br />
-                I don't just teach theory—I give you my exact blueprint to success. If you're willing to put in the effort, I will show you the fastest way to build a highly profitable online business.
+                  Twój Sukces Jest Moją Misją <br />
+                  Nie uczę tylko teorii - daję Ci dokładny plan działania. Jeśli jesteś gotów włożyć wysiłek, pokażę Ci najszybszą drogę do zbudowania dochodowego biznesu online.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-
-                  I know what works—and more importantly, what doesn't work. My courses are designed to cut out the noise and give you a clear, step-by-step roadmap to success.
+                  Wiem, co działa, a co nie. Moje kursy są zaprojektowane tak, aby wyeliminować zbędne informacje i dać Ci jasny, krok po kroku plan działania.
                 </p>
               </motion.div>
 

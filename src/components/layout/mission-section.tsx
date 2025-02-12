@@ -7,11 +7,9 @@ import { GSAPButton } from "../ui/gsap-button"
 
 export function MissionSection() {
   return (
-    <section className="relative py-6 overflow-hidden">
+    <section className="relative py-6 md:py-24 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-50" />
-      </div>
+    
 
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -57,18 +55,18 @@ export function MissionSection() {
           >
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-custom">
-                Your Success Is My Mission
+                Twój Sukces Jest Moją Misją
               </h2>
               
               <p className="text-lg text-muted-foreground">
-                I don't just teach theory—I give you my exact blueprint to success. If you're willing to put in the effort, I will show you the fastest way to build a highly profitable online business.
+                Nie uczę tylko teorii – Daję Ci dokładny plan działania. Jeśli jesteś gotów włożyć wysiłek, pokażę Ci najszybszą drogę do zbudowania dochodowego biznesu online.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "No prior experience needed – Just follow the steps",
-                  "Proven results – My students are making real money",
-                  "Lifetime access – Learn at your own pace"
+                  "Brak doświadczenia wymagany – Postępuj krok po kroku",
+                  "Dowiedziony wyniki – Moi studenci generują prawdziwe pieniądze",
+                  "Dostęp na całe życie – Naucz własnym tempem"
                 ].map((point, index) => (
                   <motion.div
                     key={index}
@@ -86,7 +84,7 @@ export function MissionSection() {
 
               <div className="pt-6">
                 <GSAPButton variant="mainPrimary" href="#courses" className="w-full sm:w-auto">
-                  Start Your Journey <ArrowRight className="w-4 h-4" />
+                  Rozpocznij swoją Podróż <ArrowRight className="w-4 h-4" />
                 </GSAPButton>
               </div>
             </div>

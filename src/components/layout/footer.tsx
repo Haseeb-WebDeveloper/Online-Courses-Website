@@ -44,18 +44,18 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-foreground/[0.01]">
       <div className="relative max-w-[2350px] mx-auto px-6 pt-2">
       <div className="py-4">
-            <h1 className="text-[6vw] md:text-[4vw] font-custom text-center">Stop Watching, Start Winning</h1>
+            <h1 className="text-[6vw] md:text-[4vw] font-custom text-center">Przestań oglądać, zacznij wygrywać</h1>
         </div>
         {/* Bottom Bar */}
         <div className=" py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Your Brand. All rights reserved.
+            © {new Date().getFullYear()} Wszelkie prawa zastrzeżone
           </p>
          
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Polityka prywatności</Link>
             <span>•</span>
-            <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Warunki użycia</Link>
           </div>
         </div>
       </div>

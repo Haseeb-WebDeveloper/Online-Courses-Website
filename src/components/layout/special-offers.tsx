@@ -7,18 +7,18 @@ import { GSAPButton } from "../ui/gsap-button"
 const offers = [
   {
     id: 1,
-    title: "2 Course Bundle",
-    description: "Choose any 2 courses from our premium collection",
+    title: "Pakiet 2 Kursów",
+    description: "Wybierz dowolne 2 kursy z naszej premium kolekcji",
     originalPrice: "2000zł",
     discountedPrice: "750zł",
-    savings: "Save 50%",
+    savings: "Oszczędź 50%",
     features: [
       "Wybierz jeden z dwóch Kursów",
       "Dożywotni dostęp do wybranego kursu",
       "Dostęp do zamkniętej grupy",
       "Pomoc 24/7",
     ],
-    highlight: "Most Flexible",
+    highlight: "Najbardziej Elastyczny",
     link: {
       "Ecommerce": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD",
       "Trading": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow"
@@ -26,23 +26,21 @@ const offers = [
   },
   {
     id: 2,
-    title: "Masterclass all in bundle",
-    description: "Get unlimited access to all our premium courses",
+    title: "Pełny Pakiet Masterclass",
+    description: "Wszystkie kursy premium w jednym",
     originalPrice: "5000zł",
     discountedPrice: "3000zł > 900zł",
-    savings: "Save 67%",
-
+    savings: "Oszczędź 67%",
     features: [
       "Dostep do wszystkich kursów",
       "Priorytetowa Pomoc 24/7",
       "Godzinna pomoc raz w miesiącu od Eksperta",
       "Dożywotni dostęp z aktualizacjami",
     ],
-    highlight: "Best Value",
+    highlight: "Najlepsza Wartość",
     link: {
-      "Enroll Now": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
+      "Zapisz się teraz": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
     }
-
   }
 ]
 
@@ -66,7 +64,7 @@ export function SpecialOffers() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium"
           >
             <Sparkles className="w-4 h-4" />
-            <span>Limited Time Offer</span>
+            <span>Czas ograniczony</span>
           </motion.div>
           
           <motion.h2
@@ -75,7 +73,7 @@ export function SpecialOffers() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-custom"
           >
-            Special Bundle Deals
+            Specjalne Pakiet Oferty
           </motion.h2>
           
           <motion.p
@@ -84,7 +82,7 @@ export function SpecialOffers() {
             viewport={{ once: true }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Save big with our exclusive bundle offers and fast-track your success
+            Oszczędzaj dużo z naszych ekskluzywnych pakietów i przyspiesz swoje sukcesy
           </motion.p>
         </div>
 
@@ -161,7 +159,7 @@ export function SpecialOffers() {
           viewport={{ once: true }}
           className="text-center text-muted-foreground mt-8"
         >
-          ⚡ Offer valid for a limited time only. Don't miss out!
+          ⚡ Oferta ważna tylko na ograniczony czas. Nie przegap!
         </motion.p>
       </div>
     </section>

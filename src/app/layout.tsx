@@ -28,9 +28,10 @@ const customFont  = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Unlock Financial Freedom | Proven Online Business Strategies by Sho B",
-  description: "Learn proven strategies to build a profitable online business with Sho B. Join 20K+ students and unlock your financial freedom through expert eCommerce and trading courses.",
+  title: "Osiągnij Wolność Finansową | Sprawdzone Strategie Biznesu Online od Sho B",
+  description: "Poznaj strategie budowy dochodowego biznesu online z Sho B. Dołącz do 20K+ uczniów i osiągnij wolność finansową dzięki kursom eCommerce i tradingu.",
 };
+
 
 export default function RootLayout({
   children,

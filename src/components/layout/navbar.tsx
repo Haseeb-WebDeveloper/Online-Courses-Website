@@ -10,10 +10,10 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 
 const navigation = [
-  { name: "About", href: "about" },
-  { name: "Courses", href: "courses" },
-  { name: "Stories", href: "stories" },
-  { name: "Contact", href: "contact" },
+  { name: "O nas", href: "about" },
+  { name: "Kursy", href: "courses" },
+  { name: "Historie", href: "stories" },
+  { name: "Kontakt", href: "contact" },
 ]
 
 export function Navbar() {
@@ -107,8 +107,7 @@ export function Navbar() {
               variant="primary" 
               className="hidden sm:inline-flex"
             >
-
-              <span>Get Started</span>
+              <span>Rozpocznij</span>
               <ArrowRight className="h-5 w-5" />
             </GSAPButton>
 
@@ -177,7 +176,7 @@ export function Navbar() {
                   {/* Mobile CTA */}
                   <div className="p-8 bg-background">
                     <GSAPButton variant="mainPrimary" className="w-full py-6 text-lg">
-                      Get Started <ArrowRight className="w-5 h-5" />
+                    Rozpocznij <ArrowRight className="w-5 h-5" />
                     </GSAPButton>
                   </div>
                 </div>

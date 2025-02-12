@@ -18,7 +18,7 @@ export function CTASection() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl lg:text-6xl font-custom"
             >
-              Start Your Journey Today
+              Zacznij swoją podróż już dziś
             </motion.h2>
 
             <motion.p
@@ -28,7 +28,7 @@ export function CTASection() {
               transition={{ delay: 0.1 }}
               className="text-lg text-muted-foreground"
             >
-              This is NOT just another online course – It's a roadmap to financial success. You get lifetime access – One-time payment, unlimited learning
+              To nie jest tylko kolejny online kurs – to droga do sukcesu finansowego. Otrzymujesz dostęp na całe życie – jednorazowy płatność, nieograniczona nauka
             </motion.p>
           </div>
 
@@ -40,7 +40,7 @@ export function CTASection() {
             transition={{ delay: 0.2 }}
           >
             <GSAPButton variant="mainPrimary" className="min-w-[200px]">
-              Get Started <ArrowRight className="w-4 h-4" />
+            Rozpocznij <ArrowRight className="w-4 h-4" />
             </GSAPButton>
           </motion.div>
         </div>

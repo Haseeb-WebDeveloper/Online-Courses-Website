@@ -75,12 +75,12 @@ export function NewCTASection() {
               viewport={{ once: true }}
               className="space-y-12"
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-custom">
-                Secure Your Spot Now – Limited Availability
+              <h2 className="text-4xl md:text-5xl font-custom">
+                Zarezerwuj swoje miejsce teraz – ograniczona dostępność
               </h2>
               <p className="text-lg text-muted-foreground">
-                This is NOT a typical online course. This is an exclusive mentorship opportunity, 
-                and I only take on a limited number of students to ensure maximum results.
+                To nie jest tylko kolejny online kurs. To jest wyjątkowa okazja do mentorskiego programu, 
+                i zajmuję się tylko ograniczoną liczbą studentów, aby zagwarantować maksymalne wyniki.
               </p>
             </motion.div>
 
@@ -93,9 +93,9 @@ export function NewCTASection() {
               className="space-y-2 text-sm"
             >
               {[
-                "Payment is 100% Secure via STRIPE - Your investment is safe",
-                "Instant Access - Start learning as soon as you enroll",
-                "No Risk, Just Results - The only way to fail is to not take action",
+                "Płatność 100% bezpieczna przez STRIPE - Twoja inwestycja chroniona",
+                "Natychmiastowy dostęp - Zacznij naukę od razu",
+                "Bezpieczeństwo i wyniki - Niepowodzenie to brak działania"
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -125,7 +125,7 @@ export function NewCTASection() {
                 {/* Name Input */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">
-                    Name
+                    Imię
                   </label>
                   <div className="relative">
                     <input
@@ -173,7 +173,7 @@ export function NewCTASection() {
                 {/* Message Input */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">
-                    Message
+                    Wiadomość
                   </label>
                   <div className="relative">
                     <textarea
@@ -202,10 +202,10 @@ export function NewCTASection() {
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
-                    "Sending..."
+                    "Wysyłanie..."
                   ) : (
                     <>
-                      Send Message <ArrowRight className="w-4 h-4" />
+                      Wyślij wiadomość <ArrowRight className="w-4 h-4" />
                     </>
                   )}
                 </GSAPButton>
