@@ -3,14 +3,16 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles, Check } from "lucide-react"
 import { GSAPButton } from "../ui/gsap-button"
+import { Button } from "../ui/button"
+import Link from "next/link"
 
 const offers = [
   {
     id: 1,
     title: "Pakiet 2 Kursów",
     description: "Wybierz dowolne 2 kursy z naszej premium kolekcji",
-    originalPrice: "2000zł",
-    discountedPrice: "750zł",
+    originalPrice: "2500zł",
+    discountedPrice: "1249zł",
     savings: "Oszczędź 50%",
     features: [
       "Wybierz jeden z dwóch Kursów",
@@ -20,8 +22,8 @@ const offers = [
     ],
     highlight: "Najbardziej Elastyczny",
     link: {
-      "Ecommerce": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD",
-      "Trading": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow"
+      "Trading 1249zł": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow",
+      "Ecommerce 1249zł": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD"
     }
   },
   {
@@ -29,7 +31,7 @@ const offers = [
     title: "Pełny Pakiet Masterclass",
     description: "Wszystkie kursy premium w jednym",
     originalPrice: "5000zł",
-    discountedPrice: "3000zł > 900zł",
+    discountedPrice: "1999zł",
     savings: "Oszczędź 67%",
     features: [
       "Dostep do wszystkich kursów",
@@ -39,7 +41,7 @@ const offers = [
     ],
     highlight: "Najlepsza Wartość",
     link: {
-      "Zapisz się teraz": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
+      "Zapisz się teraz 1999zł": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
     }
   }
 ]
@@ -134,16 +136,18 @@ export function SpecialOffers() {
                   </ul>
 
                   {/* CTA */}
-                  <div className="flex items-center gap-2 w-full justify-center">
+                  <div className="flex flex-col md:flex-row items-center gap-2 w-full justify-center">
                     {Object.entries(offer.link).map(([label, url]) => (
-                      <GSAPButton 
+                      <Button 
                         key={label}
-                        variant="mainPrimary" 
-                        className="w-full"
-                        href={url}
+                        variant="default" 
+                        className="w-full rounded-full"
+                        asChild
                       >
-                        {label} <ArrowRight className="w-4 h-4" />
-                      </GSAPButton>
+                        <Link href={url}>
+                          {label} <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </Button>
                     ))}
                   </div>
                 </div>

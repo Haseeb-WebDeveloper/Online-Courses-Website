@@ -33,7 +33,7 @@ const courses = [
     link: [
       {
         name: "Ecommerce",
-        price:"1249",
+        price:"2499",
         stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
       }
     ],
@@ -67,7 +67,7 @@ const courses = [
     link: [
       {
         name: "Masterclass",
-        price:"1999",
+        price:"4999",
         stripeLink:"https://buy.stripe.com/6oE2cb7jAfeiaas9Bd"
       }
     ],
@@ -94,7 +94,7 @@ const courses = [
     link: [
       {
         name: "Trading",
-        price:"1249",
+        price:"2499",
         stripeLink:"https://buy.stripe.com/4gw5on7jAc260zS3cN"
       }
     ],

@@ -10,6 +10,7 @@ import { NewCTASection } from "@/components/layout/new-cta-section"
 import { MissionSection } from "@/components/layout/mission-section"
 import { WhoThisIsForSection } from "@/components/layout/who-this-is-for"
 import { SpecialOffers } from "@/components/layout/special-offers"
+import { AchievementsCarousel } from "@/components/layout/achievements-carousel"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <OurJourneySection />
       <CoursesSection />
       <SpecialOffers />
+      <AchievementsCarousel />
       <SuccessStories />
       <NewCTASection />
       {/* <ScrollBasedVelocityDemo/> */}

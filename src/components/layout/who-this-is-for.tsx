@@ -6,26 +6,26 @@ import Image from "next/image"
 
 const targetAudience = [
   {
-    title: "Aspiring entrepreneurs who want to escape the 9-5 grind",
-    description: "Break free from traditional employment and build your own empire",
+    title: "Początkujący przedsiębiorcy chcący uwolnić się od pracy od 9 do 17",
+    description: "Uwolnij się od tradycyjnego zatrudnienia i zbuduj własne imperium",
     icon: Briefcase
   },
   {
-    title: "Those struggling with dropshipping or trading and need a proven system",
-    description: "Stop wasting time with trial and error - follow a proven blueprint",
+    title: "Osoby mające problemy z dropshippingiem lub tradingiem i potrzebują sprawdzonego systemu",
+    description: "Przestań marnować czas na próby i błędy - podążaj za sprawdzonym planem",
     icon: BarChart2
   },
   {
-    title: "Business owners looking to scale and multiply their income streams",
-    description: "Take your existing business to new heights with advanced strategies",
+    title: "Właściciele firm szukający rozwoju i zwiększenia źródeł dochodu",
+    description: "Wznieś swoją firmę na nowy poziom dzięki zaawansowanym strategiom",
     icon: Building2
   },
   {
-    title: "Anyone serious about financial freedom and building wealth",
-    description: "Transform your financial future with actionable knowledge",
+    title: "Każdy, kto poważnie myśli o wolności finansowej i budowaniu majątku",
+    description: "Przekształć swoją przyszłość finansową dzięki praktycznej wiedzy",
     icon: Wallet
   }
-]
+ ]
 
 export function WhoThisIsForSection() {
   return (
