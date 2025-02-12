@@ -120,7 +120,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap justify-center gap-x-12 gap-y-8 md:gap-x-20"
+              className="flex flex-col lg:flex-row justify-center gap-x-12 gap-y-8 md:gap-x-20"
             >
               {stats.map((stat, index) => (
                 <div 

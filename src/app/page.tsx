@@ -14,9 +14,9 @@ import { SpecialOffers } from "@/components/layout/special-offers"
 export default function Home() {
   return (
     <>
-      <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+    <main className="relative w-full h-full overflow-hidden">
+      <div className="z-[100] absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <HeroSection />
-
       <AboutSection />
       <MissionSection />
       <WhoThisIsForSection />
@@ -28,6 +28,7 @@ export default function Home() {
       {/* <ScrollBasedVelocityDemo/> */}
       {/* <CTASection /> */}
       <Footer />
+      </main>
     </>
   );
 }
