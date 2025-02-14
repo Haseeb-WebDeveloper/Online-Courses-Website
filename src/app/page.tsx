@@ -19,12 +19,12 @@ export default function Home() {
      
       <HeroSection />
       <AboutSection />
+      <AchievementsCarousel />
       <MissionSection />
       <WhoThisIsForSection />
       <OurJourneySection />
       <CoursesSection />
       <SpecialOffers />
-      <AchievementsCarousel />
       <SuccessStories />
       <NewCTASection />
       {/* <ScrollBasedVelocityDemo/> */}
