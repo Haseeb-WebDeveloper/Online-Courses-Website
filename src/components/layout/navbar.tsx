@@ -8,12 +8,41 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import { FaTelegramPlane , FaInstagram , FaYoutube , FaDiscord ,FaTiktok } from "react-icons/fa"
 
 const navigation = [
   { name: "O nas", href: "about" },
   { name: "Kursy", href: "courses" },
   { name: "Historie", href: "stories" },
   { name: "Kontakt", href: "contact" },
+]
+
+const socialLinks = [
+  { 
+    icon: FaInstagram, 
+    href: "https://www.instagram.com/sh0fxx",
+    label: "Instagram"
+  },
+  { 
+    icon: FaYoutube, 
+    href: "https://www.youtube.com/@sh0kingg",
+    label: "Youtube"
+  },
+  { 
+    icon: FaTiktok, 
+    href: "https://www.tiktok.com/@sh0fx?_t=ZS-8tZpbezOIzZ&_r=1",
+    label: "TikTok"
+  },
+  { 
+    icon: FaDiscord, 
+    href: "https://discord.gg/jBJ7TWANTta",
+    label: "Discord"
+  },
+  { 
+    icon: FaTelegramPlane , 
+    href: "https://t.me/shOtrading",
+    label: "Telegram"
+  }
 ]
 
 export function Navbar() {
@@ -46,7 +75,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="relative w-full z-50">
+    <header className="relative w-full z-100">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -60,7 +89,7 @@ export function Navbar() {
         {/* <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" /> */}
         
         {/* Navbar Content */}
-        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 md:pt-5 md:pb-2 flex items-center justify-between">
+        <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 md:pt-3 md:pb-2 flex items-center justify-between">
           {/* Logo */}
           <Link 
             href="/" 
@@ -91,7 +120,21 @@ export function Navbar() {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
+            {/* Social Links */}
+            <div className="hidden md:flex items-center gap-2">
+              {socialLinks.map((social) => (
+                <GSAPButton
+                  key={social.label}
+                  variant="ghost"
+                  className="hover:text-primary"
+                  href={social.href}
+                >
+                  <social.icon className="h-5 w-5" />
+                </GSAPButton>
+              ))}
+            </div>
+
             {/* Theme Toggle */}
             <GSAPButton
               variant="ghost"
@@ -169,6 +212,20 @@ export function Navbar() {
                         )}
                       >
                         {item.name}
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Add Social Links to Mobile Menu */}
+                  <div className="flex justify-center gap-4 py-6">
+                    {socialLinks.map((social) => (
+                      <Link
+                        key={social.label}
+                        href={social.href}
+                        className="p-2 hover:text-primary transition-colors"
+                        onClick={handleMobileNavClick}
+                      >
+                        <social.icon className="h-5 w-5" />
                       </Link>
                     ))}
                   </div>

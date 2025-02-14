@@ -40,13 +40,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${GeistSans.className} ${customFont.variable}`}>
-      <body className="antialiased min-h-screen">
+      <body className="antialiased min-h-screen overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+           <div className=" absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <Navbar />
           {/* <SplashCursor /> */}
           {children}

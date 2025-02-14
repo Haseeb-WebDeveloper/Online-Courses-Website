@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { GSAPButton } from "@/components/ui/gsap-button"
-import { ArrowRight, BookOpen, Users, Star, TrendingUp } from "lucide-react"
+import { ArrowRight, BookOpen, Users, Star, TrendingUp, Send, MessageSquare } from "lucide-react"
 import { motion } from "framer-motion"
+import { FaTelegramPlane , FaDiscord } from "react-icons/fa"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -93,6 +94,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Description */}
+          <div className="flex flex-col gap-4">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +103,15 @@ export function HeroSection() {
           >
             Bez zbędnych informacji. Bez zbędnego czasu. Tylko realne, działające strategie
           </motion.p>
-
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto"
+          >
+            Sprawdź Kursy Zrób Wpływ
+          </motion.p>
+          </div>
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -109,13 +119,24 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <GSAPButton variant="mainPrimary" href="#courses" className="text-base py-4">
-              Sprawdź Kursy<span className="hidden md:flex">Zrób Wpływ </span><ArrowRight />
+            <GSAPButton 
+              variant="mainPrimary" 
+              href="https://t.me/shOtrading" 
+              className="text-base py-4 px-6 flex items-center gap-2"
+            >
+              Join Telegram <Send className="h-5 w-5" />
+            </GSAPButton>
+            <GSAPButton 
+              variant="mainPrimary" 
+              href="https://discord.gg/jBJ7TWANTta" 
+              className="text-base py-4 px-6 flex items-center gap-2"
+            >
+              Join Discord <FaDiscord className="h-5 w-5" />
             </GSAPButton>
           </motion.div>
 
           {/* Stats */}
-          <div className="relative z-10 pt-8 font-custom">
+          <div className="relative z-10 pt-4 font-custom">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
