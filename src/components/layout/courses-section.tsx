@@ -127,7 +127,7 @@ export function CoursesSection() {
   }, [])
 
   return (
-    <section id="courses" className="relative py-24 overflow-hidden">
+    <section id="courses" className="relative py-16 md:py-24 overflow-hidden">
       <div className="max-w-[2350px] mx-auto px-4 lg:px-12">
         <div className="">
           {/* Section Header */}
@@ -156,13 +156,13 @@ export function CoursesSection() {
               <div key={course.id} className="course-card group">
                 <div className="relative bg-background/50 border border-primary/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
                   {/* Course Image */}
-                  <div className="relative aspect-video overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden bg-red-500">
                     <Image 
                       src={course.image} 
                       alt={course.title}
                       width={400}
                       height={300}
-                      className="object-cover aspect-video object-center group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover aspect-video object-center w-full h-full group-hover:scale-105 transition-transform duration-500"
                     />
                     
                     {/* Tags Container */}

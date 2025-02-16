@@ -7,12 +7,12 @@ import { GSAPButton } from "../ui/gsap-button"
 
 export function MissionSection() {
   return (
-    <section className="relative py-6 md:py-24 overflow-hidden">
+    <section className="relative py-8 md:py-24 overflow-hidden">
       {/* Background Elements */}
     
 
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -22,7 +22,7 @@ export function MissionSection() {
           >
             <div className="relative aspect-square rounded-2xl overflow-hidden">
               <Image
-                src="/profile-2.jpg" // Make sure to add this image to your public folder
+                src="/profile.jpg" // Make sure to add this image to your public folder
                 alt="Mission"
                 fill
                 className="object-cover"
@@ -82,7 +82,7 @@ export function MissionSection() {
                 ))}
               </div>
 
-              <div className="pt-6">
+              <div className="">
                 <GSAPButton variant="mainPrimary" href="#courses" className="w-full sm:w-auto">
                   Rozpocznij swoją Podróż <ArrowRight className="w-4 h-4" />
                 </GSAPButton>

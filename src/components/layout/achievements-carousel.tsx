@@ -51,7 +51,7 @@ export function AchievementsCarousel() {
   }, [])
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 md:py-24 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
         <div 
@@ -100,7 +100,7 @@ export function AchievementsCarousel() {
 
           {/* Images Container */}
           <div className="overflow-hidden">
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-4 lg:gap-6">
               <AnimatePresence mode="wait">
                 {achievements.slice(currentIndex, currentIndex + itemsToShow).map((item, index) => (
                   <motion.div
@@ -109,7 +109,7 @@ export function AchievementsCarousel() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="relative w-full max-h-[300px] aspect-[3/4] rounded-xl overflow-hidden border border-border bg-foreground/5"
+                    className="relative w-full max-h-[300px] aspect-[3/4] lg:rounded-xl rounded-md overflow-hidden border border-border bg-foreground/5"
                   >
                     <Image
                       src={item.image}

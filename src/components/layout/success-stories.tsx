@@ -69,14 +69,14 @@ const testimonials = [
 
 export function SuccessStories() {
   return (
-    <section id="stories" className="relative py-24 overflow-hidden bg-foreground/5">
+    <section id="stories" className="relative py-16 md:py-20 overflow-hidden bg-foreground/5">
       {/* Background gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-50" />
       </div>
 
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
-        <div className="space-y-16">
+        <div className="space-y-12">
           {/* Section Header */}
           <div className="text-center space-y-4 relative z-10">
             <motion.h2 
@@ -154,14 +154,14 @@ function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
 
         {/* Author */}
         <div className="flex items-center gap-4 mt-6 pt-6 border-t border-primary/10">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden">
+          {/* <div className="relative w-12 h-12 rounded-full overflow-hidden">
             <Image
               src={testimonial.image}
               alt={testimonial.name}
               fill
               className="object-cover"
             />
-          </div>
+          </div> */}
           <div>
             <h4 className="font-semibold">{testimonial.name}</h4>
             <p className="text-sm text-muted-foreground">{testimonial.role}</p>

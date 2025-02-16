@@ -65,7 +65,7 @@ export function NewCTASection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-50" />
       </div>
 
-      <div className="relative max-w-[2350px] mx-auto px-6 lg:px-12">
+      <div className="relative max-w-[2350px] mx-auto px-4 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Left Column - Content */}
           <div className="space-y-6">
@@ -120,7 +120,7 @@ export function NewCTASection() {
             transition={{ delay: 0.3 }}
             className="relative"
           >
-            <div className="relative p-8 rounded-2xl border border-primary/10 bg-background/80 backdrop-blur-sm">
+            <div className="relative p-4 md:p-8 rounded-2xl border border-primary/10 bg-background/80 backdrop-blur-sm">
               <form onSubmit={handleSubmit} className="space-y-2">
                 {/* Name Input */}
                 <div className="space-y-2">

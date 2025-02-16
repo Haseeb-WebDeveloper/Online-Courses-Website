@@ -69,7 +69,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="hero" className="relative pt-16 pb-24 md:py-24 overflow-hidden">
+    <section id="hero" className="relative pt-12 pb-24 md:py-20 overflow-hidden">
       {/* Background Elements */}
       {/* <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" /> */}
       {/* <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] overflow-hidden bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" /> */}
@@ -128,7 +128,7 @@ export function HeroSection() {
             </GSAPButton>
             <GSAPButton 
               variant="mainPrimary" 
-              href="https://discord.gg/jBJ7TWANTta" 
+              href="https://discord.com/invite/jBJ7W4NTta" 
               className="text-base py-4 px-6 flex items-center gap-2"
             >
               Join Discord <FaDiscord className="h-5 w-5" />
@@ -136,7 +136,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Stats */}
-          <div className="relative z-10 pt-4 font-custom">
+          <div className="relative z-10 pt-6 font-custom">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

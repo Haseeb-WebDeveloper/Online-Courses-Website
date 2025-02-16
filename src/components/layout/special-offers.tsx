@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowRight, Sparkles, Check } from "lucide-react"
-import { GSAPButton } from "../ui/gsap-button"
-import { Button } from "../ui/button"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Check } from "lucide-react";
+import { GSAPButton } from "../ui/gsap-button";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const offers = [
   {
@@ -23,8 +24,8 @@ const offers = [
     highlight: "Najbardziej Elastyczny",
     link: {
       "Trading 1249zł": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow",
-      "Ecommerce 1249zł": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD"
-    }
+      "Ecommerce 1249zł": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD",
+    },
   },
   {
     id: 2,
@@ -42,17 +43,59 @@ const offers = [
     highlight: "Najlepsza Wartość",
     link: {
       "Zapisz się teraz 1999zł": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
-    }
-  }
-]
+    },
+  },
+];
+
+function getEndTime() {
+  const now = new Date();
+  return new Date(now.getTime() + 48 * 60 * 60 * 1000); // 48 hours from now
+}
+
+type TimeLeft = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
 
 export function SpecialOffers() {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 2,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [endTime, setEndTime] = useState(getEndTime());
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = endTime.getTime() - new Date().getTime();
+
+      if (difference <= 0) {
+        // Reset timer when it reaches zero
+        setEndTime(getEndTime());
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      });
+    };
+
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [endTime]);
+
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 md:py-24 overflow-hidden">
       <div className="absolute inset-0">
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full" 
-          style={{ filter: 'blur(180px)' }}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full"
+          style={{ filter: "blur(180px)" }}
         />
       </div>
 
@@ -68,28 +111,29 @@ export function SpecialOffers() {
             <Sparkles className="w-4 h-4" />
             <span>Czas ograniczony</span>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-custom"
           >
-            Specjalne Pakiet Oferty
+            Oferty Pakiet Specjalny
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Oszczędzaj dużo z naszych ekskluzywnych pakietów i przyspiesz swoje sukcesy
+            Oszczędzaj dużo z naszych ekskluzywnych pakietów i przyspiesz swoje
+            sukcesy
           </motion.p>
         </div>
 
         {/* Offers Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 justify-center gap-8 max-w-5xl mx-auto">
           {offers.map((offer, index) => (
             <motion.div
               key={offer.id}
@@ -100,11 +144,11 @@ export function SpecialOffers() {
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-              
+
               <div className="relative p-8 rounded-2xl border border-primary/10 bg-background/50 backdrop-blur-sm hover:border-primary/20 transition-all duration-500">
                 {/* Highlight Badge */}
                 <div className="absolute -top-3 left-6">
-                  <div className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium">
+                  <div className="px-4 py-1 rounded-full bg-foreground/90 text-background text-sm font-medium">
                     {offer.highlight}
                   </div>
                 </div>
@@ -119,16 +163,25 @@ export function SpecialOffers() {
                   {/* Pricing */}
                   <div className="space-y-1">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-bold">{offer.discountedPrice}</span>
-                      <span className="text-lg text-muted-foreground line-through">{offer.originalPrice}</span>
+                      <span className="text-3xl font-bold">
+                        {offer.discountedPrice}
+                      </span>
+                      <span className="text-lg text-muted-foreground line-through">
+                        {offer.originalPrice}
+                      </span>
                     </div>
-                    <div className="text-primary font-medium">{offer.savings}</div>
+                    <div className="text-primary font-medium">
+                      {offer.savings}
+                    </div>
                   </div>
 
                   {/* Features */}
                   <ul className="space-y-3">
                     {offer.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                      <li
+                        key={index}
+                        className="flex items-center gap-2 text-muted-foreground"
+                      >
                         <Check className="w-5 h-5 text-primary" />
                         <span>{feature}</span>
                       </li>
@@ -138,9 +191,9 @@ export function SpecialOffers() {
                   {/* CTA */}
                   <div className="flex flex-col md:flex-row items-center gap-2 w-full justify-center">
                     {Object.entries(offer.link).map(([label, url]) => (
-                      <Button 
+                      <Button
                         key={label}
-                        variant="default" 
+                        variant="default"
                         className="w-full rounded-full"
                         asChild
                       >
@@ -156,6 +209,42 @@ export function SpecialOffers() {
           ))}
         </div>
 
+        {/* Timer */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-4 mt-12"
+        >
+          <div className="text-lg font-medium text-primary">
+            Oferta kończy się za:
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-center gap-4 text-center">
+            <div className="bg-primary/5 rounded-lg px-4 py-2 min-w-[80px]">
+              <div className="text-2xl font-bold">{timeLeft.days}</div>
+              <div className="text-sm text-muted-foreground">Dni</div>
+            </div>
+            <div className="bg-primary/5 rounded-lg px-4 py-2 min-w-[80px]">
+              <div className="text-2xl font-bold">
+                {timeLeft.hours.toString().padStart(2, "0")}
+              </div>
+              <div className="text-sm text-muted-foreground">Godzin</div>
+            </div>
+            <div className="bg-primary/5 rounded-lg px-4 py-2 min-w-[80px]">
+              <div className="text-2xl font-bold">
+                {timeLeft.minutes.toString().padStart(2, "0")}
+              </div>
+              <div className="text-sm text-muted-foreground">Minut</div>
+            </div>
+            <div className="bg-primary/5 rounded-lg px-4 py-2 min-w-[80px]">
+              <div className="text-2xl font-bold">
+                {timeLeft.seconds.toString().padStart(2, "0")}
+              </div>
+              <div className="text-sm text-muted-foreground">Sekund</div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Bottom Text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -167,5 +256,5 @@ export function SpecialOffers() {
         </motion.p>
       </div>
     </section>
-  )
-} 
+  );
+}

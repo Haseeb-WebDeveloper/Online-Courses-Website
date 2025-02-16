@@ -29,7 +29,7 @@ const targetAudience = [
 
 export function WhoThisIsForSection() {
   return (
-    <section className="relative py-24 overflow-hidden bg-foreground/5">
+    <section className="relative py-8 md:py-24 overflow-hidden bg-foreground/5">
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}

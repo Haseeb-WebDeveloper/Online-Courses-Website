@@ -15,7 +15,7 @@ import { AchievementsCarousel } from "@/components/layout/achievements-carousel"
 export default function Home() {
   return (
     <>
-    <main className="relative w-full h-full overflow-hidden">
+    <main className="relative w-full h-full overflow-x-hidden">
      
       <HeroSection />
       <AboutSection />

@@ -35,7 +35,7 @@ const socialLinks = [
   },
   { 
     icon: FaDiscord, 
-    href: "https://discord.gg/jBJ7TWANTta",
+    href: "https://discord.com/invite/jBJ7W4NTta",
     label: "Discord"
   },
   { 
