@@ -222,6 +222,8 @@ export function Navbar() {
                       <Link
                         key={social.label}
                         href={social.href}
+                         target="_blank"
+                         rel="noopener noreferrer"
                         className="p-2 hover:text-primary transition-colors"
                         onClick={handleMobileNavClick}
                       >

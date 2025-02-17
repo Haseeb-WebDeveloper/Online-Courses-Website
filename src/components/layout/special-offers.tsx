@@ -47,9 +47,38 @@ const offers = [
   },
 ];
 
-function getEndTime() {
-  const now = new Date();
-  return new Date(now.getTime() + 48 * 60 * 60 * 1000); // 48 hours from now
+function getNextMidnight() {
+  // Create a date object in Pakistan timezone
+  const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Karachi" });
+  const pakistanDate = new Date(now);
+  
+  // Set the time to next midnight
+  const tomorrow = new Date(pakistanDate);
+  tomorrow.setHours(24, 0, 0, 0);
+  
+  return tomorrow;
+}
+
+function calculateTimeLeft(endTime: Date): TimeLeft {
+  const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Karachi" });
+  const currentTime = new Date(now);
+  const difference = endTime.getTime() - currentTime.getTime();
+
+  if (difference <= 0) {
+    return {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
+  }
+
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / 1000 / 60) % 60),
+    seconds: Math.floor((difference / 1000) % 60)
+  };
 }
 
 type TimeLeft = {
@@ -61,32 +90,28 @@ type TimeLeft = {
 
 export function SpecialOffers() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 2,
+    days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-  const [endTime, setEndTime] = useState(getEndTime());
+  const [endTime, setEndTime] = useState(getNextMidnight());
 
   useEffect(() => {
-    const calculateTimeLeft = () => {
-      const difference = endTime.getTime() - new Date().getTime();
-
-      if (difference <= 0) {
-        // Reset timer when it reaches zero
-        setEndTime(getEndTime());
-        return;
+    const timer = setInterval(() => {
+      const newTimeLeft = calculateTimeLeft(endTime);
+      
+      if (newTimeLeft.days === 0 && 
+          newTimeLeft.hours === 0 && 
+          newTimeLeft.minutes === 0 && 
+          newTimeLeft.seconds === 0) {
+        // Reset to next midnight when timer reaches zero
+        setEndTime(getNextMidnight());
+      } else {
+        setTimeLeft(newTimeLeft);
       }
+    }, 1000);
 
-      setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      });
-    };
-
-    const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
   }, [endTime]);
 
