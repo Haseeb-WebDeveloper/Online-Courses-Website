@@ -27,7 +27,7 @@ export default function Home() {
       <SpecialOffers />
       <SuccessStories />
       <NewCTASection />
-      <ScrollBasedVelocityDemo/>
+      {/* <ScrollBasedVelocityDemo/> */}
       {/* <CTASection /> */}
       <Footer />
       </main>

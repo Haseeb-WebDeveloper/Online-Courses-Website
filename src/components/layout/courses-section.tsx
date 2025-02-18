@@ -34,7 +34,7 @@ const courses = [
       {
         name: "Ecommerce",
         price:"2499",
-        stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
+        stripeLink:"https://buy.stripe.com/aEUg31dHY1nseqI00y"
       }
     ],
     discount: "50% ZNIŻKI"
@@ -68,7 +68,7 @@ const courses = [
       {
         name: "Masterclass",
         price:"4999",
-        stripeLink:"https://buy.stripe.com/6oE2cb7jAfeiaas9Bd"
+        stripeLink:"https://buy.stripe.com/7sIcQP33kfeieqIcNo"
       }
     ],
     discount: "50% ZNIŻKI"
@@ -95,7 +95,7 @@ const courses = [
       {
         name: "Trading",
         price:"2499",
-        stripeLink:"https://buy.stripe.com/4gw5on7jAc260zS3cN"
+        stripeLink:"https://buy.stripe.com/fZeg31avMaY2ciA9Ba"
       }
     ],
     discount: "50% ZNIŻKI"

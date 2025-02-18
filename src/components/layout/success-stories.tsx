@@ -7,7 +7,7 @@ import Image from "next/image"
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "@GrindAndShine",
     role: "Cyfrowa Przedsiębiorczyni",
     image: "/avatar/avatar-1.jpg",
     content: "Kurs dropshippingu organicznego całkowicie zmienił moje podejście do biznesu. Zamiast zmagać się z niską sprzedażą, teraz regularnie generuję sześciocyfrowe przychody każdego miesiąca. Zdecydowanie polecam każdemu, kto chce osiągnąć sukces w e-commerce.",
@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "@MoneyMovesX",
     role: "Ekspert E-commerce",
     image: "/avatar/avatar-2.jpg",
     content: "Strategie TikTok Ads, które poznałem na tym kursie, pozwoliły mi rozwinąć sklep od zera do $50K w zaledwie dwa miesiące. To, czego się nauczyłem, było przełomowe, a zwrot z inwestycji przekroczył moje oczekiwania. Gorąco polecam ten kurs.",
@@ -27,7 +27,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emma Davis",
+    name: "@HustleGoddess",
     role: "Marketingowiec Afiliacyjny",
     image: "/avatar/avatar-3.jpg",
     content: "Początkowo podchodziłam do tego kursu z rezerwą, ale szybko okazało się, że zawiera wszystko, czego potrzebowałam do sukcesu. Teraz zarabiam pasywnie każdego dnia, nawet gdy śpię. To najlepsza inwestycja w moją karierę, jaką kiedykolwiek zrobiłam.",
@@ -37,7 +37,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Anna Kowalska",
+    name: "@SavageGrind_",
     role: "Specjalistka od Marketingu",
     image: "/avatar/avatar-4.jpg",
     content: "Kurs dostarczył mi narzędzi i wiedzy, które pomogły mi stworzyć skuteczną strategię marketingową. Moje kampanie są teraz znacznie bardziej efektywne, a wyniki przerosły moje oczekiwania. Gorąco polecam wszystkim profesjonalistom.",
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Tomasz Nowak",
+    name: "@NoSleepGrind",
     role: "Przedsiębiorca",
     image: "/avatar/avatar-5.jpg",
     content: "Nigdy wcześniej nie miałem tak kompleksowego podejścia do biznesu online. Kurs otworzył mi oczy na możliwości, jakie daje e-commerce, i teraz moje przychody są stabilne i przewidywalne. Polecam każdemu, kto zaczyna swoją przygodę.",

@@ -10,8 +10,8 @@ import { useEffect, useState } from "react";
 const offers = [
   {
     id: 1,
-    title: "Pakiet 2 Kursów",
-    description: "Wybierz dowolne 2 kursy z naszej premium kolekcji",
+    title: "Pakiet Powitalny",
+    description: "Wybierz jeden z dwóch kursów i zaoszczędź",
     originalPrice: "2500zł",
     discountedPrice: "1249zł",
     savings: "Oszczędź 50%",
@@ -29,7 +29,7 @@ const offers = [
   },
   {
     id: 2,
-    title: "Pełny Pakiet Masterclass",
+    title: "Sho Elite Club - Masterclass PROMO",
     description: "Wszystkie kursy premium w jednym",
     originalPrice: "5000zł",
     discountedPrice: "1999zł",
@@ -42,7 +42,7 @@ const offers = [
     ],
     highlight: "Najlepsza Wartość",
     link: {
-      "Zapisz się teraz 1999zł": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
+      "Dołącz teraz za 1999zł": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
     },
   },
 ];

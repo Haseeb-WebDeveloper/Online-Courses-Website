@@ -1,78 +1,87 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { GSAPButton } from "@/components/ui/gsap-button"
-import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react"
-import { useTheme } from "next-themes"
-import Image from "next/image"
-import { FaTelegramPlane , FaInstagram , FaYoutube , FaDiscord ,FaTiktok } from "react-icons/fa"
+import * as React from "react";
+import Link from "next/link";
+import { GSAPButton } from "@/components/ui/gsap-button";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import {
+  FaTelegramPlane,
+  FaInstagram,
+  FaYoutube,
+  FaDiscord,
+  FaTiktok,
+} from "react-icons/fa";
 
 const navigation = [
   { name: "O nas", href: "about" },
   { name: "Kursy", href: "courses" },
   { name: "Historie", href: "stories" },
   { name: "Kontakt", href: "contact" },
-]
+];
 
 const socialLinks = [
-  { 
-    icon: FaInstagram, 
+  {
+    icon: FaInstagram,
     href: "https://www.instagram.com/sh0fxx",
-    label: "Instagram"
+    label: "Instagram",
   },
-  { 
-    icon: FaYoutube, 
+  {
+    icon: FaYoutube,
     href: "https://www.youtube.com/@sh0kingg",
-    label: "Youtube"
+    label: "Youtube",
   },
-  { 
-    icon: FaTiktok, 
+  {
+    icon: FaTiktok,
     href: "https://www.tiktok.com/@sh0fx?_t=ZS-8tZpbezOIzZ&_r=1",
-    label: "TikTok"
+    label: "TikTok",
   },
-  { 
-    icon: FaDiscord, 
+  {
+    icon: FaDiscord,
     href: "https://discord.com/invite/jBJ7W4NTta",
-    label: "Discord"
+    label: "Discord",
   },
-  { 
-    icon: FaTelegramPlane , 
-    href: "https://t.me/shOtrading",
-    label: "Telegram"
-  }
-]
+  {
+    icon: FaTelegramPlane,
+    href: "https://t.me/sh0trading",
+    label: "Telegram",
+  },
+];
 
 export function Navbar() {
-  const [hoveredPath, setHoveredPath] = React.useState("/")
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
-  const { theme, setTheme } = useTheme()
-  
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
-  
+  const [hoveredPath, setHoveredPath] = React.useState("/");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
   // Close mobile menu when clicking a link
   const handleMobileNavClick = () => {
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault()
-    const element = document.getElementById(sectionId)
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80 // Adjust this value based on your needs
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - offset
+      const offset = 80; // Adjust this value based on your needs
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
-      })
+        behavior: "smooth",
+      });
     }
     // Close mobile menu if open
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="relative w-full z-100">
@@ -87,17 +96,23 @@ export function Navbar() {
       >
         {/* Gradient line */}
         {/* <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" /> */}
-        
+
         {/* Navbar Content */}
         <nav className="max-w-[2350px] mx-auto px-6 lg:px-12 md:pt-3 md:pb-2 flex items-center justify-between">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="relative flex items-center gap-2 font-custom text-xl"
           >
             <div className="relative">
-             <Image src="/logo.png" alt="logo" width={100} height={100} className="w-16 h-16" />
-             </div>
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={100}
+                height={100}
+                className="w-16 h-16"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -145,9 +160,9 @@ export function Navbar() {
             </GSAPButton>
 
             {/* CTA Button */}
-            <GSAPButton 
+            <GSAPButton
               href="#courses"
-              variant="primary" 
+              variant="primary"
               className="hidden sm:inline-flex"
             >
               <span>Rozpocznij</span>
@@ -155,7 +170,7 @@ export function Navbar() {
             </GSAPButton>
 
             {/* Mobile Menu Button */}
-            <GSAPButton 
+            <GSAPButton
               variant="ghost"
               className="md:hidden"
               onClick={toggleMobileMenu}
@@ -222,8 +237,8 @@ export function Navbar() {
                       <Link
                         key={social.label}
                         href={social.href}
-                         target="_blank"
-                         rel="noopener noreferrer"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-2 hover:text-primary transition-colors"
                         onClick={handleMobileNavClick}
                       >
@@ -234,8 +249,11 @@ export function Navbar() {
 
                   {/* Mobile CTA */}
                   <div className="p-8 bg-background">
-                    <GSAPButton variant="mainPrimary" className="w-full py-6 text-lg">
-                    Rozpocznij <ArrowRight className="w-5 h-5" />
+                    <GSAPButton
+                      variant="mainPrimary"
+                      className="w-full py-6 text-lg"
+                    >
+                      Rozpocznij <ArrowRight className="w-5 h-5" />
                     </GSAPButton>
                   </div>
                 </div>
@@ -245,5 +263,5 @@ export function Navbar() {
         </AnimatePresence>
       </motion.div>
     </header>
-  )
+  );
 }
