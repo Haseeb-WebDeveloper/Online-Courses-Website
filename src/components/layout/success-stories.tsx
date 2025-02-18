@@ -57,7 +57,7 @@ const testimonials = [
   },
   {
     id: 6,
-    name: "Klaudia Kowalska",
+    name: "@nosleep",
     role: "Marketingowiec",
     image: "/avatar/avatar-7.jpg",
     content: "Kurs marketingu cyfrowego był dla mnie przełomowy. Dzięki niemu nauczyłam się skutecznych strategii, które pozwoliły mi zwiększyć zasięg moich kampanii i osiągnąć imponujące wyniki. Teraz generuję stabilne przychody i mam pewność, że moje działania przynoszą realne efekty.",
