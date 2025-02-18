@@ -23,8 +23,8 @@ const offers = [
     ],
     highlight: "Najbardziej Elastyczny",
     link: {
-      "Trading 1249zł": "https://buy.stripe.com/4gwcPx7Do5cg69W6ow",
-      "Ecommerce 1249zł": "https://buy.stripe.com/8wMg1JbTEdIM8i48wD",
+      "Trading 1249zł": "https://buy.stripe.com/4gw5on7jAc260zS3cN",
+      "Ecommerce 1249zł": "https://buy.stripe.com/5kA3gf5bs0jociA3cL",
     },
   },
   {
@@ -42,7 +42,7 @@ const offers = [
     ],
     highlight: "Najlepsza Wartość",
     link: {
-      "Dołącz teraz za 1999zł": "https://buy.stripe.com/14kcPx8HsgUYfKw7sx",
+      "Dołącz teraz za 1999zł": "https://buy.stripe.com/6oE2cb7jAfeiaas9Bd",
     },
   },
 ];
