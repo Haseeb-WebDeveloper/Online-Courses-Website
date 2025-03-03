@@ -23,8 +23,8 @@ export default function Home() {
       <MissionSection />
       <WhoThisIsForSection />
       <OurJourneySection />
-      <CoursesSection />
       <SpecialOffers />
+      <CoursesSection />
       <SuccessStories />
       <NewCTASection />
       {/* <ScrollBasedVelocityDemo/> */}

@@ -20,6 +20,7 @@ const offers = [
       "Dożywotni dostęp do wybranego kursu",
       "Dostęp do zamkniętej grupy",
       "Pomoc 24/7",
+      "Pakiet zawiera całkowita strategie z Sho Elite Club",
     ],
     highlight: "Najbardziej Elastyczny",
     link: {
@@ -39,6 +40,7 @@ const offers = [
       "Priorytetowa Pomoc 24/7",
       "Godzinna pomoc raz w miesiącu od Eksperta",
       "Dożywotni dostęp z aktualizacjami",
+      "Pakiet zawiera całkowitą strategie She Elite Club",
     ],
     highlight: "Najlepsza Wartość",
     link: {
