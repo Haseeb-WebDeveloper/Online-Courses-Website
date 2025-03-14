@@ -32,7 +32,7 @@ Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.o
 ### Installation
 
 1. Clone the repository:   ```
-   git clone https://github.com/Haseeb-WebDeveloper/online-courses.git   ```
+   git clone https://github.com/Haseeb-WebDeveloper/Online-Courses-Website.git   ```
 
 2. Install dependencies:   ```
    bun install   ```
@@ -143,9 +143,8 @@ Haseeb Ahmed - [web.dev.haseeb@gmail.com](mailto:web.dev.haseeb@gmail.com)
 
 Connect with me on:
 - [LinkedIn](https://pk.linkedin.com/in/haseeb-ahmed-raza-khan)
-- [GitHub](https://github.com/Haseeb-WebDeveloper/)
 - [Instagram](https://www.instagram.com/haseeb.ahmed.raza.khan/)
 
 ---
 
-Built with ❤️ by Haseeb Ahmed
+Built with ❤️ by Haseeb Ahmed Raza Khan

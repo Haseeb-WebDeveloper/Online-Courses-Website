@@ -51,6 +51,10 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Wszelkie prawa zastrzeżone
           </p>
+
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <Link href="/https://haseebkhan.online/" className="hover:text-foreground transition-colors">Developed by Haseeb</Link>
+          </div>
          
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground transition-colors">Polityka prywatności</Link>
