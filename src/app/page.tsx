@@ -23,7 +23,7 @@ export default function Home() {
       <MissionSection />
       <WhoThisIsForSection />
       <OurJourneySection />
-      <SpecialOffers />
+      {/* <SpecialOffers /> */}
       <CoursesSection />
       <SuccessStories />
       <NewCTASection />

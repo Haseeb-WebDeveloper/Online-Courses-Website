@@ -9,7 +9,7 @@ const socialLinks = [
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://www.instagram.com/sh0fxx",
+    href: "https://www.instagram.com/sho.tradez?igsh=MXFqbzE5a3JzaDZyeQ==",
     followers: "7.5K+",
   },
   {

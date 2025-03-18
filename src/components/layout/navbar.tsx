@@ -26,7 +26,7 @@ const navigation = [
 const socialLinks = [
   {
     icon: FaInstagram,
-    href: "https://www.instagram.com/sh0fxx",
+    href: "https://www.instagram.com/sho.tradez?igsh=MXFqbzE5a3JzaDZyeQ==",
     label: "Instagram",
   },
   {

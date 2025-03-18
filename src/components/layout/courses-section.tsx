@@ -213,7 +213,7 @@ export function CoursesSection() {
                         {course.link.map((linkItem, index) => (
                             <Link key={index}  target="_blank"
                             rel="noopener noreferrer" href={linkItem.stripeLink} className="w-full h-full py-2 px-2 rounded-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground before:absolute before:inset-0 before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.1)_inset] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2)_inset]">
-                              <span className="">{linkItem.name} {linkItem.price}zł</span> <ArrowRight className="w-4 h-4" />
+                              <span className="">Book {linkItem.name}</span> <ArrowRight className="w-4 h-4" />
                             </Link>
                         ))}
                       </div>
