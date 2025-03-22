@@ -101,7 +101,7 @@ export function AchievementsCarousel() {
           {/* Images Container */}
           <div className="overflow-hidden">
             <div className="flex justify-center gap-4 lg:gap-6">
-              <AnimatePresence mode="wait">
+              {/* <AnimatePresence mode="wait"> */}
                 {achievements.slice(currentIndex, currentIndex + itemsToShow).map((item, index) => (
                   <motion.div
                     key={item.id}
@@ -122,7 +122,7 @@ export function AchievementsCarousel() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                 ))}
-              </AnimatePresence>
+              {/* </AnimatePresence> */}
             </div>
           </div>
 

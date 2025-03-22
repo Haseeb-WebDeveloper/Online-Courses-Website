@@ -90,7 +90,7 @@ export const GSAPButton = React.forwardRef<HTMLButtonElement, GSAPButtonProps>(
     const ButtonWrapper = href ? Link : 'div'
 
     return (
-      <ButtonWrapper href={href || ''}>
+      <Link href={href || ""}>
         <button
           ref={buttonRef}
           className={cn(
@@ -116,7 +116,7 @@ export const GSAPButton = React.forwardRef<HTMLButtonElement, GSAPButtonProps>(
             )}
           />
         </button>
-      </ButtonWrapper>
+      </Link>
     )
   }
 )

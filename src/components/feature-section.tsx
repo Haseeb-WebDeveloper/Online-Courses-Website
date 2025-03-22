@@ -97,7 +97,7 @@ export function FeatureSteps({
               "order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg"
             )}
           >
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait"> */}
               {features.map(
                 (feature, index) =>
                   index === currentFeature && (
@@ -120,7 +120,7 @@ export function FeatureSteps({
                     </motion.div>
                   ),
               )}
-            </AnimatePresence>
+            {/* </AnimatePresence> */}
           </div>
         </div>
       </div>

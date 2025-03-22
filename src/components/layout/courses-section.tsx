@@ -17,8 +17,8 @@ const courses = [
     title: "Sh0 Elite Club - eCommerce",
     description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/ecommerce.png",
-    price: "2499",
-    originalPrice: "5000",
+    originalPrice:"2500",
+    price:"1249",
     features: [
       "Dropshipping organiczny od podstaw",
       "Dropshipping Przez Meta / Tiktok ADS",
@@ -33,8 +33,9 @@ const courses = [
     link: [
       {
         name: "Ecommerce",
-        price:"2499",
-        stripeLink:"https://buy.stripe.com/aEUg31dHY1nseqI00y"
+        originalPrice:"2500",
+        price:"1249",
+        stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
       }
     ],
     discount: "50% ZNIŻKI"
@@ -44,8 +45,8 @@ const courses = [
     title: "Sh0 Elite Club - MasterClass",
     description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/masterclass.png",
-    price: "4999",
-    originalPrice: "10000",
+    originalPrice:"5000 zł",
+    price:"1999 zł",
     features: [
       "Dropshipping organiczny od podstaw",
       "Dropshipping Przez Meta / Tiktok ADS",
@@ -69,8 +70,9 @@ const courses = [
     link: [
       {
         name: "Masterclass",
-        price:"4999",
-        stripeLink:"https://buy.stripe.com/7sIcQP33kfeieqIcNo"
+        originalPrice:"5000 zł",
+        price:"1999 zł",
+        stripeLink:"https://buy.stripe.com/6oE2cb7jAfeiaas9Bd"
       }
     ],
     discount: "50% ZNIŻKI"
@@ -80,8 +82,8 @@ const courses = [
     title: "Sh0 Elite Club - Trading",
     description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/trading.png",
-    price: "2499",
-    originalPrice: "5000",
+    originalPrice:"2500 zł",
+    price:"1249 zł",
     features: [
       "Kompletna strategia SMC + Wyckoff",
       "Kompletna strategia MSNR",
@@ -98,8 +100,9 @@ const courses = [
     link: [
       {
         name: "Trading",
-        price:"2499",
-        stripeLink:"https://buy.stripe.com/fZeg31avMaY2ciA9Ba"
+        originalPrice:"2500 zł",
+        price:"1249 zł",
+        stripeLink:"https://buy.stripe.com/4gw5on7jAc260zS3cN"
       }
     ],
     discount: "50% ZNIŻKI"
@@ -177,11 +180,11 @@ export function CoursesSection() {
                         </div>
                       )}
 
-                      {course.discount && (
+                      {/* {course.discount && (
                         <div className="px-3 py-1 rounded-full text-xs font-medium text-white shadow-lg bg-red-500 border border-border">
                           {course.discount}
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
 
@@ -193,6 +196,9 @@ export function CoursesSection() {
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {course.description}
+                      </p>
+                      <p className="text-xl font-semibold text-primary/90 leading-relaxed flex items-center gap-2">
+                        <span className="line-through text-muted-foreground"> {course.originalPrice}</span>  {course.price}
                       </p>
                     </div>
 
@@ -213,7 +219,7 @@ export function CoursesSection() {
                         {course.link.map((linkItem, index) => (
                             <Link key={index}  target="_blank"
                             rel="noopener noreferrer" href={linkItem.stripeLink} className="w-full h-full py-2 px-2 rounded-full text-center flex items-center justify-center gap-2 bg-primary text-primary-foreground before:absolute before:inset-0 before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.1)_inset] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2)_inset]">
-                              <span className="">Book {linkItem.name}</span> <ArrowRight className="w-4 h-4" />
+                              <span className="">dołącz do {linkItem.name}</span> <ArrowRight className="w-4 h-4" />
                             </Link>
                         ))}
                       </div>

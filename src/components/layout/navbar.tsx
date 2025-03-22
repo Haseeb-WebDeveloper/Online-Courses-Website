@@ -185,7 +185,7 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
+        {/* <AnimatePresence> */}
           {isMobileMenuOpen && (
             <>
               {/* Backdrop */}
@@ -260,7 +260,7 @@ export function Navbar() {
               </motion.div>
             </>
           )}
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
       </motion.div>
     </header>
   );
