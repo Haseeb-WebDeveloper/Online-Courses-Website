@@ -4,8 +4,6 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar"
-import SmoothScrolling from "@/components/smooth-scrolling";
-// import SplashCursor from "@/components/ui/animated-cursor";
 
 const customFont = localFont({
   src: [
@@ -48,16 +46,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScrolling>
+          {/* <SmoothScrolling> */}
             {/* <div className=" absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" /> */}
             <Navbar />
-            {/* <SplashCursor
-              INITIAL_SPLATS={12} // More initial splats
-              SPLAT_RADIUS={0.3}  // Larger splats
-              VELOCITY_DISSIPATION={1.8} // Longer-lasting effects
-            /> */}
             {children}
-          </SmoothScrolling>
+          {/* </SmoothScrolling> */}
         </ThemeProvider>
       </body>
     </html>
