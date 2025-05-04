@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const stats = [
   {
     label: "Aktywnych Studentów",
-    value: "20K+",
+    value: "300+",
     icon: Users,
     description: "Uczy się i rozwija",
   },
@@ -95,7 +95,7 @@ export function HeroSection() {
           >
             <h1 className="text-4xl md:text-6xl font-custom max-w-6xl mx-auto leading-normal ">
               <span className="">
-                Odkryj swoją Wolność Finansową z Prowadzonych Strategii
+              Osiągnij wymarzoną wolność finansowa dzięki sprawdzonym strategiom
               </span>
             </h1>
           </motion.div>
@@ -108,8 +108,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto"
             >
-              Bez zbędnych informacji. Bez zbędnego czasu. Tylko realne,
-              działające strategie
+              Bez zbędnych informacji, samo mięso. Tylko sprawdzone strategie przetestowane przez setki ludzi
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
