@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Quote, Star } from "lucide-react"
-import Image from "next/image"
 
 const testimonials = [
   {

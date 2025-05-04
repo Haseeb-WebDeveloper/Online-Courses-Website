@@ -5,16 +5,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GSAPButton } from "@/components/ui/gsap-button";
 import {
-  ArrowRight,
-  BookOpen,
   Users,
   Star,
   TrendingUp,
   Send,
-  MessageSquare,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import HeroVideoDialog from "../magicui/hero-video-dialog";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -122,6 +120,25 @@ export function HeroSection() {
               Sprawdź Kursy Zrób Wpływ
             </motion.p>
           </div>
+
+          {/* video dialog */}
+          <div className="relative max-w-6xl mx-auto">
+            <HeroVideoDialog
+              className="block dark:hidden"
+              animationStyle="from-center"
+              videoSrc="https://www.youtube.com/embed/aGadsVOWCAQ"
+              thumbnailSrc="/thumbnail.jpg"
+              thumbnailAlt="Hero Video"
+            />
+            <HeroVideoDialog
+              className="hidden dark:block"
+              animationStyle="from-center"
+              videoSrc="https://www.youtube.com/embed/aGadsVOWCAQ"
+              thumbnailSrc="/thumbnail.jpg"
+              thumbnailAlt="Hero Video"
+            />
+          </div>
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

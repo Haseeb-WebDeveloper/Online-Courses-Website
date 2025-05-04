@@ -85,8 +85,7 @@ const courses = [
     originalPrice:"2500 zł",
     price:"1249 zł",
     features: [
-      "Kompletna strategia SMC + Wyckoff",
-      "Kompletna strategia MSNR",
+      "Kompletna strategia ALCHEMIST MSNR + WYCKOFF",
       "Kompletna strategia Liquidity + Price Action",
       "Psychologia w tradingu",
       "Najlepsze aplikacje firmy i brokerzy",
@@ -158,7 +157,7 @@ export function CoursesSection() {
           </div>
 
           {/* Courses Grid */}
-          <div className="courses-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="courses-grid flex flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
               <div key={course.id} className="course-card group">
                 <div className="relative bg-background/50 border border-primary/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">

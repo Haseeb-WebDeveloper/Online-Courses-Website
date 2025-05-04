@@ -4,9 +4,10 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar"
-import SplashCursor from "@/components/ui/animated-cursor";
+import SmoothScrolling from "@/components/smooth-scrolling";
+// import SplashCursor from "@/components/ui/animated-cursor";
 
-const customFont  = localFont({
+const customFont = localFont({
   src: [
     {
       path: '../../public/fonts/NeueMachina-Light.otf',
@@ -47,10 +48,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-           {/* <div className=" absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" /> */}
-          <Navbar />
-          {/* <SplashCursor /> */}
-          {children}
+          <SmoothScrolling>
+            {/* <div className=" absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" /> */}
+            <Navbar />
+            {/* <SplashCursor
+              INITIAL_SPLATS={12} // More initial splats
+              SPLAT_RADIUS={0.3}  // Larger splats
+              VELOCITY_DISSIPATION={1.8} // Longer-lasting effects
+            /> */}
+            {children}
+          </SmoothScrolling>
         </ThemeProvider>
       </body>
     </html>
