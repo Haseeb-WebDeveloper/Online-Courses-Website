@@ -5,10 +5,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import { GSAPButton } from "../ui/gsap-button"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "../ui/button"
 
 gsap.registerPlugin(ScrollTrigger)
 const courses = [
@@ -17,8 +15,8 @@ const courses = [
     title: "Sh0 Elite Club - eCommerce",
     description: "Jednorazowa płatność za wszystkie kursy i materiały.",
     image: "/ecommerce.png",
-    originalPrice:"2500",
-    price:"1249",
+    originalPrice:"2500 zł",
+    price:"1249 zł",
     features: [
       "Dropshipping organiczny od podstaw",
       "Dropshipping Przez Meta / Tiktok ADS",
@@ -33,8 +31,8 @@ const courses = [
     link: [
       {
         name: "Ecommerce",
-        originalPrice:"2500",
-        price:"1249",
+        originalPrice:"2500 zł",
+        price:"1249 zł",
         stripeLink:"https://buy.stripe.com/5kA3gf5bs0jociA3cL"
       }
     ],
