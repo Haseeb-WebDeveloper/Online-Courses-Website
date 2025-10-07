@@ -2,7 +2,7 @@
 
 A cutting-edge educational platform built with Next.js 14, featuring a stunning UI/UX design, fluid animations, and seamless user experience.
 
-Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.online/)
+Visit my portfolio at: [https://www.haseebahmedrazakhan.online/](https://www.haseebahmedrazakhan.online/)
 
 ## ✨ Features
 

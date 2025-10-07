@@ -53,7 +53,7 @@ export function Footer() {
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="https://haseebkhan.online/" className="hover:text-foreground transition-colors">Developed By Haseeb</Link>
+            <Link href="https://www.haseebahmedrazakhan.online/" className="hover:text-foreground transition-colors">Developed By Haseeb</Link>
           </div>
          
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
